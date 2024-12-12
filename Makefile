@@ -68,6 +68,7 @@ board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.c
 
 C_SOURCES +=  \
 board/stm32f103cbtx_board/Core/Extension/stm32_config.c \
+board/stm32f103cbtx_board/Core/Extension/pwm_hardware.c \
 board/lcd_16x2/lcd_16x2.c \
 # C app
 C_SOURCES +=  \
@@ -124,7 +125,8 @@ AS_DEFS =
 # C defines
 C_DEFS =  \
 -DUSE_HAL_DRIVER \
--DSTM32F103xB
+-DSTM32F103xB \
+-DUSE_FULL_LL_DRIVER
 
 
 # AS includes
