@@ -13,9 +13,10 @@
 ######################################
 # target
 ######################################
-TARGET = stm32f103cbtx_board
+TARGET = stm32f411ceux_board
 
-
+BOARD			= board/stm32f411ceux_board
+MCU_STARTUP		= startup_stm32f411xe.s
 ######################################
 # building variables
 ######################################
@@ -36,39 +37,39 @@ BUILD_DIR = build
 ######################################
 # C sources
 C_SOURCES =  \
-board/stm32f103cbtx_board/Core/Src/gpio.c \
-board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c \
-board/stm32f103cbtx_board/Core/Src/stm32f1xx_hal_msp.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c \
-board/stm32f103cbtx_board/Core/Src/system_stm32f1xx.c \
-board/stm32f103cbtx_board/Core/Src/sysmem.c \
-board/stm32f103cbtx_board/Core/Src/syscalls.c \
-board/stm32f103cbtx_board/Core/Src/adc.c \
-board/stm32f103cbtx_board/Core/Src/dma.c \
-board/stm32f103cbtx_board/Core/Src/tim.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c
+$(BOARD)/Core/Src/stm32f4xx_it.c \
+$(BOARD)/Core/Src/stm32f4xx_hal_msp.c \
+$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c \
+$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c \
+$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.c \
+$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c \
+$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c \
+$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c \
+$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c \
+$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c \
+$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c \
+$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c \
+$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c \
+$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c \
+$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c \
+$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c \
+$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c \
+$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c \
+$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c \
+$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c \
+$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c \
+$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c \
+$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c \
+$(BOARD)/Core/Src/system_stm32f4xx.c \
+$(BOARD)/Core/Src/sysmem.c \
+$(BOARD)/Core/Src/syscalls.c \
+$(BOARD)/Core/Src/gpio.c \
+$(BOARD)/Core/Src/tim.c
+
 C_SOURCES +=  \
-board/stm32f103cbtx_board/Core/Extension/stm32_config.c \
-board/stm32f103cbtx_board/Core/Extension/pwm_hardware.c \
+$(BOARD)/Core/Extension/pwm_hardware.c \
+$(BOARD)/Core/Extension/update_interrupt_hardware.c \
+$(BOARD)/Core/Extension/board.c \
 #board/lcd_16x2/lcd_16x2.c \
 # C app
 C_SOURCES +=  \
@@ -77,7 +78,7 @@ delay/delay.c \
 components/adc_sensor/adc_sensor.c \
 # ASM sources
 ASM_SOURCES =  \
-startup_stm32f103xb.s
+$(MCU_STARTUP)
 
 # ASM sources
 ASMM_SOURCES = 
@@ -124,9 +125,9 @@ AS_DEFS =
 
 # C defines
 C_DEFS =  \
+-DUSE_FULL_LL_DRIVER \
 -DUSE_HAL_DRIVER \
--DSTM32F103xB \
--DUSE_FULL_LL_DRIVER
+-DSTM32F411xE
 
 
 # AS includes
@@ -134,15 +135,15 @@ AS_INCLUDES =
 
 # C includes
 C_INCLUDES =  \
--Iboard/stm32f103cbtx_board/Core/Inc \
--Iboard/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc \
--Iboard/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy \
--Iboard/stm32f103cbtx_board/Drivers/CMSIS/Device/ST/STM32F1xx/Include \
--Iboard/stm32f103cbtx_board/Drivers/CMSIS/Include
+-I$(BOARD)/Core/Inc \
+-I$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Inc \
+-I$(BOARD)/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy \
+-I$(BOARD)/Drivers/CMSIS/Device/ST/STM32F4xx/Include \
+-I$(BOARD)/Drivers/CMSIS/Include
 # C library
 C_INCLUDES	+=	\
 -Iapp\
--Iboard/stm32f103cbtx_board/Core/Extension \
+-I$(BOARD)//Core/Extension \
 -Idelay\
 -Icomponents/adc_sensor\\
 #-Iboard/lcd_16x2 \
@@ -164,7 +165,7 @@ CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
 # LDFLAGS
 #######################################
 # link script
-LDSCRIPT = STM32F103C8Tx_FLASH.ld
+LDSCRIPT = STM32F411CEUx_FLASH.ld
 
 # libraries
 LIBS = -lc -lm -lnosys 
