@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -24,7 +24,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
   21              		.thumb
   22              		.thumb_func
   24              	NMI_Handler:
-  25              	.LFB65:
+  25              	.LFB319:
   26              		.file 1 "board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c"
    1:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN Header */
    2:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** /**
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
   30:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** /* USER CODE END TD */
   31:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** 
   32:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** /* Private define ------------------------------------------------------------*/
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 2
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s 			page 2
 
 
   33:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN PD */
@@ -86,7 +86,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
   55:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** /* USER CODE END 0 */
   56:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** 
   57:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** /* External variables --------------------------------------------------------*/
-  58:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** extern DMA_HandleTypeDef hdma_adc1;
+  58:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** 
   59:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN EV */
   60:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** 
   61:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** /* USER CODE END EV */
@@ -118,11 +118,11 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
   75:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c ****   {
   36              		.loc 1 75 10 discriminator 1 view .LVU3
   37 0000 FEE7     		b	.L2
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 3
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s 			page 3
 
 
   38              		.cfi_endproc
-  39              	.LFE65:
+  39              	.LFE319:
   41              		.section	.text.HardFault_Handler,"ax",%progbits
   42              		.align	1
   43              		.global	HardFault_Handler
@@ -130,7 +130,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
   45              		.thumb
   46              		.thumb_func
   48              	HardFault_Handler:
-  49              	.LFB66:
+  49              	.LFB320:
   78:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c ****   /* USER CODE END NonMaskableInt_IRQn 1 */
   79:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** }
   80:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** 
@@ -160,7 +160,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
   59              		.loc 1 89 9 discriminator 1 view .LVU7
   60 0000 FEE7     		b	.L4
   61              		.cfi_endproc
-  62              	.LFE66:
+  62              	.LFE320:
   64              		.section	.text.MemManage_Handler,"ax",%progbits
   65              		.align	1
   66              		.global	MemManage_Handler
@@ -168,7 +168,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
   68              		.thumb
   69              		.thumb_func
   71              	MemManage_Handler:
-  72              	.LFB67:
+  72              	.LFB321:
   94:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** }
   95:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** 
   96:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** /**
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
  100:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** {
   73              		.loc 1 100 1 view -0
   74              		.cfi_startproc
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 4
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s 			page 4
 
 
   75              		@ Volatile: function does not return.
@@ -200,7 +200,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
   82              		.loc 1 104 9 discriminator 1 view .LVU11
   83 0000 FEE7     		b	.L6
   84              		.cfi_endproc
-  85              	.LFE67:
+  85              	.LFE321:
   87              		.section	.text.BusFault_Handler,"ax",%progbits
   88              		.align	1
   89              		.global	BusFault_Handler
@@ -208,7 +208,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
   91              		.thumb
   92              		.thumb_func
   94              	BusFault_Handler:
-  95              	.LFB68:
+  95              	.LFB322:
  109:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** }
  110:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** 
  111:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** /**
@@ -237,8 +237,8 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
  105              		.loc 1 119 9 discriminator 1 view .LVU15
  106 0000 FEE7     		b	.L8
  107              		.cfi_endproc
- 108              	.LFE68:
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 5
+ 108              	.LFE322:
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s 			page 5
 
 
  110              		.section	.text.UsageFault_Handler,"ax",%progbits
@@ -248,7 +248,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
  114              		.thumb
  115              		.thumb_func
  117              	UsageFault_Handler:
- 118              	.LFB69:
+ 118              	.LFB323:
  124:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** }
  125:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** 
  126:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** /**
@@ -277,7 +277,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
  128              		.loc 1 134 9 discriminator 1 view .LVU19
  129 0000 FEE7     		b	.L10
  130              		.cfi_endproc
- 131              	.LFE69:
+ 131              	.LFE323:
  133              		.section	.text.SVC_Handler,"ax",%progbits
  134              		.align	1
  135              		.global	SVC_Handler
@@ -285,7 +285,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
  137              		.thumb
  138              		.thumb_func
  140              	SVC_Handler:
- 141              	.LFB70:
+ 141              	.LFB324:
  139:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** }
  140:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** 
  141:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** /**
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
  144              		@ args = 0, pretend = 0, frame = 0
  145              		@ frame_needed = 0, uses_anonymous_args = 0
  146              		@ link register save eliminated.
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 6
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s 			page 6
 
 
  146:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN SVCall_IRQn 0 */
@@ -311,7 +311,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
  147              		.loc 1 152 1 view .LVU21
  148 0000 7047     		bx	lr
  149              		.cfi_endproc
- 150              	.LFE70:
+ 150              	.LFE324:
  152              		.section	.text.DebugMon_Handler,"ax",%progbits
  153              		.align	1
  154              		.global	DebugMon_Handler
@@ -319,7 +319,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
  156              		.thumb
  157              		.thumb_func
  159              	DebugMon_Handler:
- 160              	.LFB71:
+ 160              	.LFB325:
  153:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** 
  154:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** /**
  155:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c ****   * @brief This function handles Debug monitor.
@@ -341,7 +341,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
  166              		.loc 1 165 1 view .LVU23
  167 0000 7047     		bx	lr
  168              		.cfi_endproc
- 169              	.LFE71:
+ 169              	.LFE325:
  171              		.section	.text.PendSV_Handler,"ax",%progbits
  172              		.align	1
  173              		.global	PendSV_Handler
@@ -349,7 +349,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
  175              		.thumb
  176              		.thumb_func
  178              	PendSV_Handler:
- 179              	.LFB72:
+ 179              	.LFB326:
  166:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** 
  167:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** /**
  168:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c ****   * @brief This function handles Pendable request for system service.
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
  171:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** {
  180              		.loc 1 171 1 view -0
  181              		.cfi_startproc
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 7
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s 			page 7
 
 
  182              		@ args = 0, pretend = 0, frame = 0
@@ -374,7 +374,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
  185              		.loc 1 178 1 view .LVU25
  186 0000 7047     		bx	lr
  187              		.cfi_endproc
- 188              	.LFE72:
+ 188              	.LFE326:
  190              		.section	.text.SysTick_Handler,"ax",%progbits
  191              		.align	1
  192              		.global	SysTick_Handler
@@ -382,7 +382,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
  194              		.thumb
  195              		.thumb_func
  197              	SysTick_Handler:
- 198              	.LFB73:
+ 198              	.LFB327:
  179:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** 
  180:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** /**
  181:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c ****   * @brief This function handles System tick timer.
@@ -412,18 +412,18 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
  211              		.loc 1 192 1 is_stmt 0 view .LVU28
  212 0006 08BD     		pop	{r3, pc}
  213              		.cfi_endproc
- 214              	.LFE73:
+ 214              	.LFE327:
  216              		.section	.text.DMA1_Channel1_IRQHandler,"ax",%progbits
  217              		.align	1
  218              		.global	DMA1_Channel1_IRQHandler
  219              		.syntax unified
  220              		.thumb
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 8
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s 			page 8
 
 
  221              		.thumb_func
  223              	DMA1_Channel1_IRQHandler:
- 224              	.LFB74:
+ 224              	.LFB328:
  193:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** 
  194:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** /******************************************************************************/
  195:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** /* STM32F1xx Peripheral Interrupt Handlers                                    */
@@ -441,67 +441,50 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 1
  226              		.cfi_startproc
  227              		@ args = 0, pretend = 0, frame = 0
  228              		@ frame_needed = 0, uses_anonymous_args = 0
- 229 0000 08B5     		push	{r3, lr}
- 230              	.LCFI1:
- 231              		.cfi_def_cfa_offset 8
- 232              		.cfi_offset 3, -8
- 233              		.cfi_offset 14, -4
+ 229              		@ link register save eliminated.
  206:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN DMA1_Channel1_IRQn 0 */
  207:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** 
  208:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c ****   /* USER CODE END DMA1_Channel1_IRQn 0 */
- 209:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c ****   HAL_DMA_IRQHandler(&hdma_adc1);
- 234              		.loc 1 209 3 view .LVU30
- 235 0002 0248     		ldr	r0, .L18
- 236 0004 FFF7FEFF 		bl	HAL_DMA_IRQHandler
- 237              	.LVL1:
+ 209:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** 
  210:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN DMA1_Channel1_IRQn 1 */
  211:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** 
  212:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c ****   /* USER CODE END DMA1_Channel1_IRQn 1 */
  213:board/stm32f103cbtx_board/Core/Src/stm32f1xx_it.c **** }
- 238              		.loc 1 213 1 is_stmt 0 view .LVU31
- 239 0008 08BD     		pop	{r3, pc}
- 240              	.L19:
- 241 000a 00BF     		.align	2
- 242              	.L18:
- 243 000c 00000000 		.word	hdma_adc1
- 244              		.cfi_endproc
- 245              	.LFE74:
- 247              		.text
- 248              	.Letext0:
- 249              		.file 2 "c:\\st\\stm32cubeide_1.12.1\\stm32cubeide\\plugins\\com.st.stm32cube.ide.mcu.externaltool
- 250              		.file 3 "c:\\st\\stm32cubeide_1.12.1\\stm32cubeide\\plugins\\com.st.stm32cube.ide.mcu.externaltool
- 251              		.file 4 "board/stm32f103cbtx_board/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
- 252              		.file 5 "board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
- 253              		.file 6 "board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
- 254              		.file 7 "board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s 			page 9
+ 230              		.loc 1 213 1 view .LVU30
+ 231 0000 7047     		bx	lr
+ 232              		.cfi_endproc
+ 233              	.LFE328:
+ 235              		.text
+ 236              	.Letext0:
+ 237              		.file 2 "c:\\st\\stm32cubeide_1.12.1\\stm32cubeide\\plugins\\com.st.stm32cube.ide.mcu.externaltool
+ 238              		.file 3 "c:\\st\\stm32cubeide_1.12.1\\stm32cubeide\\plugins\\com.st.stm32cube.ide.mcu.externaltool
+ 239              		.file 4 "board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_tim.h"
+ 240              		.file 5 "board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1xx_it.c
-C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s:18     .text.NMI_Handler:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s:24     .text.NMI_Handler:0000000000000000 NMI_Handler
-C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s:42     .text.HardFault_Handler:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s:48     .text.HardFault_Handler:0000000000000000 HardFault_Handler
-C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s:65     .text.MemManage_Handler:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s:71     .text.MemManage_Handler:0000000000000000 MemManage_Handler
-C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s:88     .text.BusFault_Handler:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s:94     .text.BusFault_Handler:0000000000000000 BusFault_Handler
-C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s:111    .text.UsageFault_Handler:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s:117    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
-C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s:134    .text.SVC_Handler:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s:140    .text.SVC_Handler:0000000000000000 SVC_Handler
-C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s:153    .text.DebugMon_Handler:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s:159    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
-C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s:172    .text.PendSV_Handler:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s:178    .text.PendSV_Handler:0000000000000000 PendSV_Handler
-C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s:191    .text.SysTick_Handler:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s:197    .text.SysTick_Handler:0000000000000000 SysTick_Handler
-C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s:217    .text.DMA1_Channel1_IRQHandler:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s:223    .text.DMA1_Channel1_IRQHandler:0000000000000000 DMA1_Channel1_IRQHandler
-C:\Users\vanlo\AppData\Local\Temp\ccRuIMNx.s:243    .text.DMA1_Channel1_IRQHandler:000000000000000c $d
+C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s:18     .text.NMI_Handler:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s:24     .text.NMI_Handler:0000000000000000 NMI_Handler
+C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s:42     .text.HardFault_Handler:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s:48     .text.HardFault_Handler:0000000000000000 HardFault_Handler
+C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s:65     .text.MemManage_Handler:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s:71     .text.MemManage_Handler:0000000000000000 MemManage_Handler
+C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s:88     .text.BusFault_Handler:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s:94     .text.BusFault_Handler:0000000000000000 BusFault_Handler
+C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s:111    .text.UsageFault_Handler:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s:117    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
+C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s:134    .text.SVC_Handler:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s:140    .text.SVC_Handler:0000000000000000 SVC_Handler
+C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s:153    .text.DebugMon_Handler:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s:159    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
+C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s:172    .text.PendSV_Handler:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s:178    .text.PendSV_Handler:0000000000000000 PendSV_Handler
+C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s:191    .text.SysTick_Handler:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s:197    .text.SysTick_Handler:0000000000000000 SysTick_Handler
+C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s:217    .text.DMA1_Channel1_IRQHandler:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\cclRHu7b.s:223    .text.DMA1_Channel1_IRQHandler:0000000000000000 DMA1_Channel1_IRQHandler
 
 UNDEFINED SYMBOLS
 HAL_IncTick
-HAL_DMA_IRQHandler
-hdma_adc1

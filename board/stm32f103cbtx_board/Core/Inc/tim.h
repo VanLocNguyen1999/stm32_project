@@ -26,19 +26,17 @@ extern "C" {
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-//#include "main.h"
+#include "main.h"
 
 /* USER CODE BEGIN Includes */
 #include "stm32_config.h"
 /* USER CODE END Includes */
 
-extern TIM_HandleTypeDef htim3;
-
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
 
-void MX_TIM3_Init(void);
+void MX_TIM1_Init(void);
 
 /* USER CODE BEGIN Prototypes */
 

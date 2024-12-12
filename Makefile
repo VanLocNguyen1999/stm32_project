@@ -58,8 +58,13 @@ board/stm32f103cbtx_board/Core/Src/syscalls.c \
 board/stm32f103cbtx_board/Core/Src/adc.c \
 board/stm32f103cbtx_board/Core/Src/dma.c \
 board/stm32f103cbtx_board/Core/Src/tim.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c
+board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_adc.c \
+board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.c \
+board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.c \
+board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.c \
+board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.c \
+board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.c \
+board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.c
 
 C_SOURCES +=  \
 board/stm32f103cbtx_board/Core/Extension/stm32_config.c \
@@ -132,7 +137,6 @@ C_INCLUDES =  \
 -Iboard/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy \
 -Iboard/stm32f103cbtx_board/Drivers/CMSIS/Device/ST/STM32F1xx/Include \
 -Iboard/stm32f103cbtx_board/Drivers/CMSIS/Include
-
 # C library
 C_INCLUDES	+=	\
 -Iapp\

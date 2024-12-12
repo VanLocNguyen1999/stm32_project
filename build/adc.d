@@ -20,13 +20,11 @@ build/adc.o: board/stm32f103cbtx_board/Core/Src/adc.c \
  board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h \
  board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h \
  board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h \
- board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h \
- board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
  board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
  board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
  board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
- board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
- board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
+ board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_tim.h \
+ board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_adc.h \
  board/stm32f103cbtx_board/Core/Inc/gpio.h
 board/stm32f103cbtx_board/Core/Inc/adc.h:
 board/stm32f103cbtx_board/Core/Extension/stm32_config.h:
@@ -49,11 +47,9 @@ board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h:
 board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h:
 board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h:
 board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h:
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h:
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h:
 board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h:
 board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h:
 board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
+board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_tim.h:
+board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_adc.h:
 board/stm32f103cbtx_board/Core/Inc/gpio.h:

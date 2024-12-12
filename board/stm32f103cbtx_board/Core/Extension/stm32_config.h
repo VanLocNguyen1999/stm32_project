@@ -9,6 +9,8 @@
 #define STM32F1_CONFIG_H_
 
 #include "stm32f1xx_hal.h"
+#include "stm32f1xx_ll_tim.h"
+#include "stm32f1xx_ll_adc.h"
 #include "gpio.h"
 void Error_Handler(void);
 void SystemClock_Config(void);
