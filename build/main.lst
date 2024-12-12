@@ -1,0 +1,158 @@
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccgc8B7Y.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.arch armv7-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"main.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.rodata.main.str1.4,"aMS",%progbits,1
+  18              		.align	2
+  19              	.LC0:
+  20 0000 4E475559 		.ascii	"NGUYEN VAN LOC\000"
+  20      454E2056 
+  20      414E204C 
+  20      4F4300
+  21 000f 00       		.align	2
+  22              	.LC1:
+  23 0010 53454C45 		.ascii	"SELEX\000"
+  23      5800
+  24              		.section	.text.main,"ax",%progbits
+  25              		.align	1
+  26              		.global	main
+  27              		.syntax unified
+  28              		.thumb
+  29              		.thumb_func
+  31              	main:
+  32              	.LFB65:
+  33              		.file 1 "app/main.c"
+   1:app/main.c    **** /* USER CODE BEGIN Header */
+   2:app/main.c    **** /**
+   3:app/main.c    ****   ******************************************************************************
+   4:app/main.c    ****   * @file           : main.c
+   5:app/main.c    ****   * @brief          : Main program body
+   6:app/main.c    ****   ******************************************************************************
+   7:app/main.c    ****   * @attention
+   8:app/main.c    ****   *
+   9:app/main.c    ****   * Copyright (c) 2024 STMicroelectronics.
+  10:app/main.c    ****   * All rights reserved.
+  11:app/main.c    ****   *
+  12:app/main.c    ****   * This software is licensed under terms that can be found in the LICENSE file
+  13:app/main.c    ****   * in the root directory of this software component.
+  14:app/main.c    ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  15:app/main.c    ****   *
+  16:app/main.c    ****   ******************************************************************************
+  17:app/main.c    ****   */
+  18:app/main.c    **** /* USER CODE END Header */
+  19:app/main.c    **** /* Includes ------------------------------------------------------------------*/
+  20:app/main.c    **** #include "main.h"
+  21:app/main.c    **** #include "stm32_config.h"
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccgc8B7Y.s 			page 2
+
+
+  22:app/main.c    **** #include "lcd_16x2.h"
+  23:app/main.c    **** 
+  24:app/main.c    **** int main(void) {
+  34              		.loc 1 24 16 view -0
+  35              		.cfi_startproc
+  36              		@ Volatile: function does not return.
+  37              		@ args = 0, pretend = 0, frame = 0
+  38              		@ frame_needed = 0, uses_anonymous_args = 0
+  39 0000 08B5     		push	{r3, lr}
+  40              	.LCFI0:
+  41              		.cfi_def_cfa_offset 8
+  42              		.cfi_offset 3, -8
+  43              		.cfi_offset 14, -4
+  25:app/main.c    **** 
+  26:app/main.c    **** 	HAL_Init();
+  44              		.loc 1 26 2 view .LVU1
+  45 0002 FFF7FEFF 		bl	HAL_Init
+  46              	.LVL0:
+  27:app/main.c    **** 	SystemClock_Config();
+  47              		.loc 1 27 2 view .LVU2
+  48 0006 FFF7FEFF 		bl	SystemClock_Config
+  49              	.LVL1:
+  28:app/main.c    **** 	MX_GPIO_Init();
+  50              		.loc 1 28 2 view .LVU3
+  51 000a FFF7FEFF 		bl	MX_GPIO_Init
+  52              	.LVL2:
+  29:app/main.c    **** 	LCD_Init();
+  53              		.loc 1 29 2 view .LVU4
+  54 000e FFF7FEFF 		bl	LCD_Init
+  55              	.LVL3:
+  30:app/main.c    **** 	LCD_Gotoxy(1, 0);
+  56              		.loc 1 30 2 view .LVU5
+  57 0012 0021     		movs	r1, #0
+  58 0014 0120     		movs	r0, #1
+  59 0016 FFF7FEFF 		bl	LCD_Gotoxy
+  60              	.LVL4:
+  31:app/main.c    **** 	LCD_Puts("NGUYEN VAN LOC");
+  61              		.loc 1 31 2 view .LVU6
+  62 001a 0548     		ldr	r0, .L4
+  63 001c FFF7FEFF 		bl	LCD_Puts
+  64              	.LVL5:
+  32:app/main.c    **** 	LCD_Gotoxy(8, 1);
+  65              		.loc 1 32 2 view .LVU7
+  66 0020 0121     		movs	r1, #1
+  67 0022 0820     		movs	r0, #8
+  68 0024 FFF7FEFF 		bl	LCD_Gotoxy
+  69              	.LVL6:
+  33:app/main.c    **** 	LCD_Puts("SELEX");
+  70              		.loc 1 33 2 view .LVU8
+  71 0028 0248     		ldr	r0, .L4+4
+  72 002a FFF7FEFF 		bl	LCD_Puts
+  73              	.LVL7:
+  74              	.L2:
+  34:app/main.c    **** 	while (1) {
+  75              		.loc 1 34 2 discriminator 1 view .LVU9
+  35:app/main.c    **** 
+  36:app/main.c    **** 	};
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccgc8B7Y.s 			page 3
+
+
+  76              		.loc 1 36 2 discriminator 1 view .LVU10
+  34:app/main.c    **** 	while (1) {
+  77              		.loc 1 34 8 discriminator 1 view .LVU11
+  78 002e FEE7     		b	.L2
+  79              	.L5:
+  80              		.align	2
+  81              	.L4:
+  82 0030 00000000 		.word	.LC0
+  83 0034 10000000 		.word	.LC1
+  84              		.cfi_endproc
+  85              	.LFE65:
+  87              		.text
+  88              	.Letext0:
+  89              		.file 2 "board/lcd_16x2/lcd_16x2.h"
+  90              		.file 3 "board/stm32f103cbtx_board/Core/Inc/gpio.h"
+  91              		.file 4 "board/stm32f103cbtx_board/Core/Extension/stm32_config.h"
+  92              		.file 5 "board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+  93              		.file 6 "board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccgc8B7Y.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 main.c
+C:\Users\vanlo\AppData\Local\Temp\ccgc8B7Y.s:18     .rodata.main.str1.4:0000000000000000 $d
+C:\Users\vanlo\AppData\Local\Temp\ccgc8B7Y.s:25     .text.main:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\ccgc8B7Y.s:31     .text.main:0000000000000000 main
+C:\Users\vanlo\AppData\Local\Temp\ccgc8B7Y.s:82     .text.main:0000000000000030 $d
+
+UNDEFINED SYMBOLS
+HAL_Init
+SystemClock_Config
+MX_GPIO_Init
+LCD_Init
+LCD_Gotoxy
+LCD_Puts

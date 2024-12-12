@@ -1,0 +1,413 @@
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.arch armv7-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"adc_sensor.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.global	__aeabi_i2f
+  18              		.global	__aeabi_fmul
+  19              		.section	.text.sensor_get_result_default_impl,"ax",%progbits
+  20              		.align	1
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  25              	sensor_get_result_default_impl:
+  26              	.LVL0:
+  27              	.LFB73:
+  28              		.file 1 "components/adc_sensor/adc_sensor.c"
+   1:components/adc_sensor/adc_sensor.c **** /*
+   2:components/adc_sensor/adc_sensor.c ****  * adc_sensor.c
+   3:components/adc_sensor/adc_sensor.c ****  *
+   4:components/adc_sensor/adc_sensor.c ****  *  Created on: Apr 4, 2024
+   5:components/adc_sensor/adc_sensor.c ****  *      Author: vanlo
+   6:components/adc_sensor/adc_sensor.c ****  */
+   7:components/adc_sensor/adc_sensor.c **** 
+   8:components/adc_sensor/adc_sensor.c **** #include "adc_sensor.h"
+   9:components/adc_sensor/adc_sensor.c **** #include "stdio.h"
+  10:components/adc_sensor/adc_sensor.c **** #include "stdlib.h"
+  11:components/adc_sensor/adc_sensor.c **** 
+  12:components/adc_sensor/adc_sensor.c **** static float sensor_get_result_default_impl(const ADC_Sensor* p_ss);
+  13:components/adc_sensor/adc_sensor.c **** 
+  14:components/adc_sensor/adc_sensor.c **** void sensor_init(ADC_Sensor* p_ss, Get_ADC_Itf impl, const float adc_gain, const int32_t adc_offset
+  15:components/adc_sensor/adc_sensor.c **** {
+  16:components/adc_sensor/adc_sensor.c **** 	p_ss->get_adc					=	impl;
+  17:components/adc_sensor/adc_sensor.c **** 	p_ss->get_result				=	sensor_get_result_default_impl;
+  18:components/adc_sensor/adc_sensor.c **** 	p_ss->gain						=	adc_gain;
+  19:components/adc_sensor/adc_sensor.c **** 	p_ss->offset					=	adc_offset;
+  20:components/adc_sensor/adc_sensor.c **** }
+  21:components/adc_sensor/adc_sensor.c **** ADC_Sensor* sensor_create(Get_ADC_Itf impl, const float adc_gain, const int32_t adc_offset){
+  22:components/adc_sensor/adc_sensor.c **** 
+  23:components/adc_sensor/adc_sensor.c ****         ADC_Sensor* p_ss=(ADC_Sensor*)malloc(sizeof(ADC_Sensor));
+  24:components/adc_sensor/adc_sensor.c ****         while(p_ss==NULL){
+  25:components/adc_sensor/adc_sensor.c **** 
+  26:components/adc_sensor/adc_sensor.c ****         };
+  27:components/adc_sensor/adc_sensor.c ****         sensor_init(p_ss, impl, adc_gain, adc_offset);
+  28:components/adc_sensor/adc_sensor.c ****         return p_ss;
+  29:components/adc_sensor/adc_sensor.c **** }
+  30:components/adc_sensor/adc_sensor.c **** static OPTIMIZE_ATTR float sensor_get_result_default_impl(const ADC_Sensor* p_ss){
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s 			page 2
+
+
+  29              		.loc 1 30 82 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		.loc 1 30 82 is_stmt 0 view .LVU1
+  34 0000 10B5     		push	{r4, lr}
+  35              	.LCFI0:
+  36              		.cfi_def_cfa_offset 8
+  37              		.cfi_offset 4, -8
+  38              		.cfi_offset 14, -4
+  39 0002 0446     		mov	r4, r0
+  31:components/adc_sensor/adc_sensor.c **** 
+  32:components/adc_sensor/adc_sensor.c **** 	int32_t adc = sensor_get_adc(p_ss);
+  40              		.loc 1 32 2 is_stmt 1 view .LVU2
+  41              	.LVL1:
+  42              	.LBB4:
+  43              	.LBI4:
+  44              		.file 2 "components/adc_sensor/adc_sensor.h"
+   1:components/adc_sensor/adc_sensor.h **** /*
+   2:components/adc_sensor/adc_sensor.h ****  * adc_sensor.h
+   3:components/adc_sensor/adc_sensor.h ****  *
+   4:components/adc_sensor/adc_sensor.h ****  *  Created on: Apr 4, 2024
+   5:components/adc_sensor/adc_sensor.h ****  *      Author: vanlo
+   6:components/adc_sensor/adc_sensor.h ****  */
+   7:components/adc_sensor/adc_sensor.h **** 
+   8:components/adc_sensor/adc_sensor.h **** #ifndef COMPONENTS_ADC_SENSOR_ADC_SENSOR_H_
+   9:components/adc_sensor/adc_sensor.h **** #define COMPONENTS_ADC_SENSOR_ADC_SENSOR_H_
+  10:components/adc_sensor/adc_sensor.h **** #include "stm32_config.h"
+  11:components/adc_sensor/adc_sensor.h **** 
+  12:components/adc_sensor/adc_sensor.h **** 
+  13:components/adc_sensor/adc_sensor.h **** typedef struct ADC_Sensor_t ADC_Sensor;
+  14:components/adc_sensor/adc_sensor.h **** typedef float (*Get_Result)(const ADC_Sensor* p_ss);
+  15:components/adc_sensor/adc_sensor.h **** typedef  int32_t (*Get_ADC_Itf)(const ADC_Sensor* p_ss);
+  16:components/adc_sensor/adc_sensor.h **** 
+  17:components/adc_sensor/adc_sensor.h **** struct ADC_Sensor_t {
+  18:components/adc_sensor/adc_sensor.h ****         int32_t offset;
+  19:components/adc_sensor/adc_sensor.h ****         float gain;
+  20:components/adc_sensor/adc_sensor.h ****         Get_ADC_Itf get_adc;
+  21:components/adc_sensor/adc_sensor.h ****         Get_Result get_result;
+  22:components/adc_sensor/adc_sensor.h **** };
+  23:components/adc_sensor/adc_sensor.h **** 
+  24:components/adc_sensor/adc_sensor.h **** ADC_Sensor* sensor_create(Get_ADC_Itf impl, const float adc_gain, const int32_t adc_offset);
+  25:components/adc_sensor/adc_sensor.h **** void sensor_init(ADC_Sensor* p_ss, Get_ADC_Itf impl, const float adc_gain, const int32_t adc_offset
+  26:components/adc_sensor/adc_sensor.h **** 
+  27:components/adc_sensor/adc_sensor.h **** static OPTIMIZE_ATTR int32_t sensor_get_adc(const ADC_Sensor* p_ss){
+  45              		.loc 2 27 30 view .LVU3
+  46              	.LBB5:
+  28:components/adc_sensor/adc_sensor.h **** 	return p_ss->get_adc(p_ss);
+  47              		.loc 2 28 2 view .LVU4
+  48              		.loc 2 28 13 is_stmt 0 view .LVU5
+  49 0004 8368     		ldr	r3, [r0, #8]
+  50              		.loc 2 28 9 view .LVU6
+  51 0006 9847     		blx	r3
+  52              	.LVL2:
+  53              		.loc 2 28 9 view .LVU7
+  54              	.LBE5:
+  55              	.LBE4:
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s 			page 3
+
+
+  33:components/adc_sensor/adc_sensor.c **** 	return (float)((adc - p_ss->offset)) * p_ss->gain;
+  56              		.loc 1 33 2 is_stmt 1 view .LVU8
+  57              		.loc 1 33 28 is_stmt 0 view .LVU9
+  58 0008 2368     		ldr	r3, [r4]
+  59              		.loc 1 33 9 view .LVU10
+  60 000a C01A     		subs	r0, r0, r3
+  61              	.LVL3:
+  62              		.loc 1 33 9 view .LVU11
+  63 000c FFF7FEFF 		bl	__aeabi_i2f
+  64              	.LVL4:
+  65              		.loc 1 33 39 view .LVU12
+  66 0010 6168     		ldr	r1, [r4, #4]	@ float
+  67 0012 FFF7FEFF 		bl	__aeabi_fmul
+  68              	.LVL5:
+  34:components/adc_sensor/adc_sensor.c **** }
+  69              		.loc 1 34 1 view .LVU13
+  70 0016 10BD     		pop	{r4, pc}
+  71              		.loc 1 34 1 view .LVU14
+  72              		.cfi_endproc
+  73              	.LFE73:
+  75              		.section	.text.sensor_init,"ax",%progbits
+  76              		.align	1
+  77              		.global	sensor_init
+  78              		.syntax unified
+  79              		.thumb
+  80              		.thumb_func
+  82              	sensor_init:
+  83              	.LVL6:
+  84              	.LFB71:
+  15:components/adc_sensor/adc_sensor.c **** 	p_ss->get_adc					=	impl;
+  85              		.loc 1 15 1 is_stmt 1 view -0
+  86              		.cfi_startproc
+  87              		@ args = 0, pretend = 0, frame = 0
+  88              		@ frame_needed = 0, uses_anonymous_args = 0
+  89              		@ link register save eliminated.
+  16:components/adc_sensor/adc_sensor.c **** 	p_ss->get_result				=	sensor_get_result_default_impl;
+  90              		.loc 1 16 2 view .LVU16
+  16:components/adc_sensor/adc_sensor.c **** 	p_ss->get_result				=	sensor_get_result_default_impl;
+  91              		.loc 1 16 20 is_stmt 0 view .LVU17
+  92 0000 8160     		str	r1, [r0, #8]
+  17:components/adc_sensor/adc_sensor.c **** 	p_ss->gain						=	adc_gain;
+  93              		.loc 1 17 2 is_stmt 1 view .LVU18
+  17:components/adc_sensor/adc_sensor.c **** 	p_ss->gain						=	adc_gain;
+  94              		.loc 1 17 22 is_stmt 0 view .LVU19
+  95 0002 0249     		ldr	r1, .L4
+  96              	.LVL7:
+  17:components/adc_sensor/adc_sensor.c **** 	p_ss->gain						=	adc_gain;
+  97              		.loc 1 17 22 view .LVU20
+  98 0004 C160     		str	r1, [r0, #12]
+  18:components/adc_sensor/adc_sensor.c **** 	p_ss->offset					=	adc_offset;
+  99              		.loc 1 18 2 is_stmt 1 view .LVU21
+  18:components/adc_sensor/adc_sensor.c **** 	p_ss->offset					=	adc_offset;
+ 100              		.loc 1 18 18 is_stmt 0 view .LVU22
+ 101 0006 4260     		str	r2, [r0, #4]	@ float
+  19:components/adc_sensor/adc_sensor.c **** }
+ 102              		.loc 1 19 2 is_stmt 1 view .LVU23
+  19:components/adc_sensor/adc_sensor.c **** }
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s 			page 4
+
+
+ 103              		.loc 1 19 19 is_stmt 0 view .LVU24
+ 104 0008 0360     		str	r3, [r0]
+  20:components/adc_sensor/adc_sensor.c **** ADC_Sensor* sensor_create(Get_ADC_Itf impl, const float adc_gain, const int32_t adc_offset){
+ 105              		.loc 1 20 1 view .LVU25
+ 106 000a 7047     		bx	lr
+ 107              	.L5:
+ 108              		.align	2
+ 109              	.L4:
+ 110 000c 00000000 		.word	sensor_get_result_default_impl
+ 111              		.cfi_endproc
+ 112              	.LFE71:
+ 114              		.section	.text.sensor_create,"ax",%progbits
+ 115              		.align	1
+ 116              		.global	sensor_create
+ 117              		.syntax unified
+ 118              		.thumb
+ 119              		.thumb_func
+ 121              	sensor_create:
+ 122              	.LVL8:
+ 123              	.LFB72:
+  21:components/adc_sensor/adc_sensor.c **** 
+ 124              		.loc 1 21 92 is_stmt 1 view -0
+ 125              		.cfi_startproc
+ 126              		@ args = 0, pretend = 0, frame = 0
+ 127              		@ frame_needed = 0, uses_anonymous_args = 0
+  21:components/adc_sensor/adc_sensor.c **** 
+ 128              		.loc 1 21 92 is_stmt 0 view .LVU27
+ 129 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 130              	.LCFI1:
+ 131              		.cfi_def_cfa_offset 24
+ 132              		.cfi_offset 3, -24
+ 133              		.cfi_offset 4, -20
+ 134              		.cfi_offset 5, -16
+ 135              		.cfi_offset 6, -12
+ 136              		.cfi_offset 7, -8
+ 137              		.cfi_offset 14, -4
+ 138 0002 0546     		mov	r5, r0
+ 139 0004 0E46     		mov	r6, r1
+ 140 0006 1746     		mov	r7, r2
+  23:components/adc_sensor/adc_sensor.c ****         while(p_ss==NULL){
+ 141              		.loc 1 23 9 is_stmt 1 view .LVU28
+  23:components/adc_sensor/adc_sensor.c ****         while(p_ss==NULL){
+ 142              		.loc 1 23 39 is_stmt 0 view .LVU29
+ 143 0008 1020     		movs	r0, #16
+ 144              	.LVL9:
+  23:components/adc_sensor/adc_sensor.c ****         while(p_ss==NULL){
+ 145              		.loc 1 23 39 view .LVU30
+ 146 000a FFF7FEFF 		bl	malloc
+ 147              	.LVL10:
+  23:components/adc_sensor/adc_sensor.c ****         while(p_ss==NULL){
+ 148              		.loc 1 23 39 view .LVU31
+ 149 000e 0446     		mov	r4, r0
+ 150              	.LVL11:
+  24:components/adc_sensor/adc_sensor.c **** 
+ 151              		.loc 1 24 9 is_stmt 1 view .LVU32
+ 152              	.L7:
+  26:components/adc_sensor/adc_sensor.c ****         sensor_init(p_ss, impl, adc_gain, adc_offset);
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s 			page 5
+
+
+ 153              		.loc 1 26 9 discriminator 1 view .LVU33
+  24:components/adc_sensor/adc_sensor.c **** 
+ 154              		.loc 1 24 14 discriminator 1 view .LVU34
+ 155 0010 002C     		cmp	r4, #0
+ 156 0012 FDD0     		beq	.L7
+  26:components/adc_sensor/adc_sensor.c ****         sensor_init(p_ss, impl, adc_gain, adc_offset);
+ 157              		.loc 1 26 10 view .LVU35
+  27:components/adc_sensor/adc_sensor.c ****         return p_ss;
+ 158              		.loc 1 27 9 view .LVU36
+ 159 0014 3B46     		mov	r3, r7
+ 160 0016 3246     		mov	r2, r6
+ 161 0018 2946     		mov	r1, r5
+ 162 001a 2046     		mov	r0, r4
+ 163              	.LVL12:
+  27:components/adc_sensor/adc_sensor.c ****         return p_ss;
+ 164              		.loc 1 27 9 is_stmt 0 view .LVU37
+ 165 001c FFF7FEFF 		bl	sensor_init
+ 166              	.LVL13:
+  28:components/adc_sensor/adc_sensor.c **** }
+ 167              		.loc 1 28 9 is_stmt 1 view .LVU38
+  29:components/adc_sensor/adc_sensor.c **** static OPTIMIZE_ATTR float sensor_get_result_default_impl(const ADC_Sensor* p_ss){
+ 168              		.loc 1 29 1 is_stmt 0 view .LVU39
+ 169 0020 2046     		mov	r0, r4
+ 170 0022 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+  29:components/adc_sensor/adc_sensor.c **** static OPTIMIZE_ATTR float sensor_get_result_default_impl(const ADC_Sensor* p_ss){
+ 171              		.loc 1 29 1 view .LVU40
+ 172              		.cfi_endproc
+ 173              	.LFE72:
+ 175              		.section	.text.sensor_set_offset,"ax",%progbits
+ 176              		.align	1
+ 177              		.global	sensor_set_offset
+ 178              		.syntax unified
+ 179              		.thumb
+ 180              		.thumb_func
+ 182              	sensor_set_offset:
+ 183              	.LVL14:
+ 184              	.LFB74:
+  35:components/adc_sensor/adc_sensor.c **** void sensor_set_offset(ADC_Sensor* p_sensor,const int32_t offset){
+ 185              		.loc 1 35 66 is_stmt 1 view -0
+ 186              		.cfi_startproc
+ 187              		@ args = 0, pretend = 0, frame = 0
+ 188              		@ frame_needed = 0, uses_anonymous_args = 0
+ 189              		@ link register save eliminated.
+  36:components/adc_sensor/adc_sensor.c **** 
+  37:components/adc_sensor/adc_sensor.c ****         p_sensor->offset=offset;
+ 190              		.loc 1 37 9 view .LVU42
+ 191              		.loc 1 37 25 is_stmt 0 view .LVU43
+ 192 0000 0160     		str	r1, [r0]
+  38:components/adc_sensor/adc_sensor.c **** }
+ 193              		.loc 1 38 1 view .LVU44
+ 194 0002 7047     		bx	lr
+ 195              		.cfi_endproc
+ 196              	.LFE74:
+ 198              		.section	.text.sensor_set_gain,"ax",%progbits
+ 199              		.align	1
+ 200              		.global	sensor_set_gain
+ 201              		.syntax unified
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s 			page 6
+
+
+ 202              		.thumb
+ 203              		.thumb_func
+ 205              	sensor_set_gain:
+ 206              	.LVL15:
+ 207              	.LFB75:
+  39:components/adc_sensor/adc_sensor.c **** 
+  40:components/adc_sensor/adc_sensor.c **** void sensor_set_gain(ADC_Sensor* p_sensor,const float gain){
+ 208              		.loc 1 40 60 is_stmt 1 view -0
+ 209              		.cfi_startproc
+ 210              		@ args = 0, pretend = 0, frame = 0
+ 211              		@ frame_needed = 0, uses_anonymous_args = 0
+ 212              		@ link register save eliminated.
+  41:components/adc_sensor/adc_sensor.c **** 
+  42:components/adc_sensor/adc_sensor.c ****         p_sensor->gain=gain;
+ 213              		.loc 1 42 9 view .LVU46
+ 214              		.loc 1 42 23 is_stmt 0 view .LVU47
+ 215 0000 4160     		str	r1, [r0, #4]	@ float
+  43:components/adc_sensor/adc_sensor.c **** }
+ 216              		.loc 1 43 1 view .LVU48
+ 217 0002 7047     		bx	lr
+ 218              		.cfi_endproc
+ 219              	.LFE75:
+ 221              		.section	.text.sensor_get_offset,"ax",%progbits
+ 222              		.align	1
+ 223              		.global	sensor_get_offset
+ 224              		.syntax unified
+ 225              		.thumb
+ 226              		.thumb_func
+ 228              	sensor_get_offset:
+ 229              	.LVL16:
+ 230              	.LFB76:
+  44:components/adc_sensor/adc_sensor.c **** 
+  45:components/adc_sensor/adc_sensor.c **** int32_t sensor_get_offset(const ADC_Sensor* p_sensor){
+ 231              		.loc 1 45 54 is_stmt 1 view -0
+ 232              		.cfi_startproc
+ 233              		@ args = 0, pretend = 0, frame = 0
+ 234              		@ frame_needed = 0, uses_anonymous_args = 0
+ 235              		@ link register save eliminated.
+  46:components/adc_sensor/adc_sensor.c **** 
+  47:components/adc_sensor/adc_sensor.c ****         return  p_sensor->offset;
+ 236              		.loc 1 47 9 view .LVU50
+  48:components/adc_sensor/adc_sensor.c **** }
+ 237              		.loc 1 48 1 is_stmt 0 view .LVU51
+ 238 0000 0068     		ldr	r0, [r0]
+ 239              	.LVL17:
+ 240              		.loc 1 48 1 view .LVU52
+ 241 0002 7047     		bx	lr
+ 242              		.cfi_endproc
+ 243              	.LFE76:
+ 245              		.section	.text.sensor_get_gain,"ax",%progbits
+ 246              		.align	1
+ 247              		.global	sensor_get_gain
+ 248              		.syntax unified
+ 249              		.thumb
+ 250              		.thumb_func
+ 252              	sensor_get_gain:
+ 253              	.LVL18:
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s 			page 7
+
+
+ 254              	.LFB77:
+  49:components/adc_sensor/adc_sensor.c **** 
+  50:components/adc_sensor/adc_sensor.c **** float sensor_get_gain(const ADC_Sensor* p_sensor){
+ 255              		.loc 1 50 50 is_stmt 1 view -0
+ 256              		.cfi_startproc
+ 257              		@ args = 0, pretend = 0, frame = 0
+ 258              		@ frame_needed = 0, uses_anonymous_args = 0
+ 259              		@ link register save eliminated.
+  51:components/adc_sensor/adc_sensor.c **** 
+  52:components/adc_sensor/adc_sensor.c ****         return p_sensor->gain;
+ 260              		.loc 1 52 9 view .LVU54
+  53:components/adc_sensor/adc_sensor.c **** }
+ 261              		.loc 1 53 1 is_stmt 0 view .LVU55
+ 262 0000 4068     		ldr	r0, [r0, #4]	@ float
+ 263              	.LVL19:
+ 264              		.loc 1 53 1 view .LVU56
+ 265 0002 7047     		bx	lr
+ 266              		.cfi_endproc
+ 267              	.LFE77:
+ 269              		.text
+ 270              	.Letext0:
+ 271              		.file 3 "c:\\st\\stm32cubeide_1.12.1\\stm32cubeide\\plugins\\com.st.stm32cube.ide.mcu.externaltool
+ 272              		.file 4 "c:\\st\\stm32cubeide_1.12.1\\stm32cubeide\\plugins\\com.st.stm32cube.ide.mcu.externaltool
+ 273              		.file 5 "c:\\st\\stm32cubeide_1.12.1\\stm32cubeide\\plugins\\com.st.stm32cube.ide.mcu.externaltool
+ 274              		.file 6 "c:\\st\\stm32cubeide_1.12.1\\stm32cubeide\\plugins\\com.st.stm32cube.ide.mcu.externaltool
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 adc_sensor.c
+C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s:20     .text.sensor_get_result_default_impl:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s:25     .text.sensor_get_result_default_impl:0000000000000000 sensor_get_result_default_impl
+C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s:76     .text.sensor_init:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s:82     .text.sensor_init:0000000000000000 sensor_init
+C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s:110    .text.sensor_init:000000000000000c $d
+C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s:115    .text.sensor_create:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s:121    .text.sensor_create:0000000000000000 sensor_create
+C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s:176    .text.sensor_set_offset:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s:182    .text.sensor_set_offset:0000000000000000 sensor_set_offset
+C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s:199    .text.sensor_set_gain:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s:205    .text.sensor_set_gain:0000000000000000 sensor_set_gain
+C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s:222    .text.sensor_get_offset:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s:228    .text.sensor_get_offset:0000000000000000 sensor_get_offset
+C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s:246    .text.sensor_get_gain:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\cccWtQ0f.s:252    .text.sensor_get_gain:0000000000000000 sensor_get_gain
+
+UNDEFINED SYMBOLS
+__aeabi_i2f
+__aeabi_fmul
+malloc

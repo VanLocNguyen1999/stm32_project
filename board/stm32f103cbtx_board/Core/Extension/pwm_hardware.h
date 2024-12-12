@@ -1,0 +1,16 @@
+/*
+ * pwm_hardware.h
+ *
+ *  Created on: Dec 12, 2024
+ *      Author: vanlo
+ */
+
+#ifndef BOARD_STM32F103CBTX_BOARD_CORE_EXTENSION_PWM_HARDWARE_H_
+#define BOARD_STM32F103CBTX_BOARD_CORE_EXTENSION_PWM_HARDWARE_H_
+
+#include "tim.h"
+
+
+
+
+#endif /* BOARD_STM32F103CBTX_BOARD_CORE_EXTENSION_PWM_HARDWARE_H_ */
