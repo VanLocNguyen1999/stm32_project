@@ -19,17 +19,21 @@ int main(void) {
 
 }
 
-void stm32_project_init(void){
+void stm32_project_init(void) {
 
 	board_hardware_init();
-	update_enable_all_interrupt();
+	__disable_irq();
+	update_1khz_it_hw_init_ex();
+	update_it_hw_change_freq(1000);
+	update_1khz_it_hw_enable();
+	__enable_irq();
 }
-void STM32_PROJECT_UPDATE_1KHZ_ISR_HANDLER(void) {
+void STM32_PROJECT_UPDATE_1KHZ_ISR_HANDLER(void){
 	counter ++;
 	if(counter > 5000){
 
 		counter = 0;
 	}
-	UPDATE_IT_TIM2_CLEAR_FLAG;
+	UPDATE_1KHZ_ISR_CLEAR_FLAG;
 }
 

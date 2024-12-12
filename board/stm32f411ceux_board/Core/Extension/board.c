@@ -19,7 +19,6 @@ void board_hardware_init(void){
 	  MX_TIM1_Init();
 	  MX_TIM2_Init();
 	  pwm_hardware_init_ex();
-	  update_1khz_it_hw_init_ex();
 }
 
 void SystemClock_Config(void)
