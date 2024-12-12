@@ -23,6 +23,9 @@
 #include "stm32f1xx_ll_exti.h"
 
 #include "gpio.h"
+#include "adc.h"
+#include "dma.h"
+#include "tim.h"
 #include "stdlib.h"
 
 void Error_Handler(void);

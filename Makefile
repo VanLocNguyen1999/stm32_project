@@ -58,18 +58,18 @@ board/stm32f103cbtx_board/Core/Src/syscalls.c \
 board/stm32f103cbtx_board/Core/Src/adc.c \
 board/stm32f103cbtx_board/Core/Src/dma.c \
 board/stm32f103cbtx_board/Core/Src/tim.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_adc.c \
 board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.c \
 board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.c \
 board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.c \
 board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.c \
 board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.c \
-board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.c
-
+board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.c \
+board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c \
+board/stm32f103cbtx_board/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c
 C_SOURCES +=  \
 board/stm32f103cbtx_board/Core/Extension/stm32_config.c \
 board/stm32f103cbtx_board/Core/Extension/pwm_hardware.c \
-board/lcd_16x2/lcd_16x2.c \
+#board/lcd_16x2/lcd_16x2.c \
 # C app
 C_SOURCES +=  \
 app/main.c \
@@ -143,9 +143,9 @@ C_INCLUDES =  \
 C_INCLUDES	+=	\
 -Iapp\
 -Iboard/stm32f103cbtx_board/Core/Extension \
--Iboard/lcd_16x2 \
 -Idelay\
--Icomponents/adc_sensor\
+-Icomponents/adc_sensor\\
+#-Iboard/lcd_16x2 \
 # compile gcc flags
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
 
