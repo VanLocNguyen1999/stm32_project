@@ -26,6 +26,15 @@
 #include "gpio.h"
 #include "stdlib.h"
 
+#define ENABLE 	1			//xoa
+#define DISABLE	0			//xoa
+
+#define BOARD__INPUT_1_Pin LL_GPIO_PIN_3
+#define BOARD__INPUT_1_GPIO_Port GPIOA
+#define BOARD__INPUT_1_EXTI_IRQn EXTI3_IRQn
+#define BOARD_TP_Pin LL_GPIO_PIN_9
+#define BOARD_TP_GPIO_Port GPIOB
+
 static inline void Error_Handler(void)
 {
   __disable_irq();

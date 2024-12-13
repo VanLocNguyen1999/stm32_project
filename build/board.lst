@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
   31 0000 00B5     		push	{lr}
   32              	.LCFI0:
   33              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 2
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 2
 
 
   34              		.cfi_offset 14, -4
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
   81 003e 02F44042 		and	r2, r2, #49152
   82 0042 0292     		str	r2, [sp, #8]
   83              		.loc 1 32 3 view .LVU15
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 3
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 3
 
 
   84 0044 029A     		ldr	r2, [sp, #8]
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  124              	.LVL1:
  125              		.loc 1 46 6 view .LVU37
  126 006a 08B1     		cbz	r0, .L2
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 4
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 4
 
 
   47:board/stm32f411ceux_board/Core/Extension/board.c ****   {
@@ -215,12 +215,21 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
   26:board/stm32f411ceux_board/Core/Extension/stm32_config.h **** #include "gpio.h"
   27:board/stm32f411ceux_board/Core/Extension/stm32_config.h **** #include "stdlib.h"
   28:board/stm32f411ceux_board/Core/Extension/stm32_config.h **** 
-  29:board/stm32f411ceux_board/Core/Extension/stm32_config.h **** static inline void Error_Handler(void)
- 131              		.loc 2 29 20 view .LVU39
+  29:board/stm32f411ceux_board/Core/Extension/stm32_config.h **** #define ENABLE 	1			//xoa
+  30:board/stm32f411ceux_board/Core/Extension/stm32_config.h **** #define DISABLE	0			//xoa
+  31:board/stm32f411ceux_board/Core/Extension/stm32_config.h **** 
+  32:board/stm32f411ceux_board/Core/Extension/stm32_config.h **** #define BOARD__INPUT_1_Pin LL_GPIO_PIN_3
+  33:board/stm32f411ceux_board/Core/Extension/stm32_config.h **** #define BOARD__INPUT_1_GPIO_Port GPIOA
+  34:board/stm32f411ceux_board/Core/Extension/stm32_config.h **** #define BOARD__INPUT_1_EXTI_IRQn EXTI3_IRQn
+  35:board/stm32f411ceux_board/Core/Extension/stm32_config.h **** #define BOARD_TP_Pin LL_GPIO_PIN_9
+  36:board/stm32f411ceux_board/Core/Extension/stm32_config.h **** #define BOARD_TP_GPIO_Port GPIOB
+  37:board/stm32f411ceux_board/Core/Extension/stm32_config.h **** 
+  38:board/stm32f411ceux_board/Core/Extension/stm32_config.h **** static inline void Error_Handler(void)
+ 131              		.loc 2 38 20 view .LVU39
  132              	.LBE16:
-  30:board/stm32f411ceux_board/Core/Extension/stm32_config.h **** {
-  31:board/stm32f411ceux_board/Core/Extension/stm32_config.h ****   __disable_irq();
- 133              		.loc 2 31 3 view .LVU40
+  39:board/stm32f411ceux_board/Core/Extension/stm32_config.h **** {
+  40:board/stm32f411ceux_board/Core/Extension/stm32_config.h ****   __disable_irq();
+ 133              		.loc 2 40 3 view .LVU40
  134              	.LBB19:
  135              	.LBB17:
  136              	.LBI17:
@@ -229,6 +238,9 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
    2:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
    3:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  * @brief    CMSIS compiler GCC header file
    4:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  * @version  V5.4.1
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 5
+
+
    5:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  * @date     27. May 2021
    6:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  ******************************************************************************/
    7:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** /*
@@ -238,9 +250,6 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
   11:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  *
   12:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  * Licensed under the Apache License, Version 2.0 (the License); you may
   13:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  * not use this file except in compliance with the License.
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 5
-
-
   14:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  * You may obtain a copy of the License at
   15:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  *
   16:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  * www.apache.org/licenses/LICENSE-2.0
@@ -289,6 +298,9 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
   59:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __WEAK                                 __attribute__((weak))
   60:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   61:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 6
+
+
   62:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED                               __attribute__((packed, aligned(1)))
   63:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   64:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED_STRUCT
@@ -298,9 +310,6 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
   68:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED_UNION                         union __attribute__((packed, aligned(1)))
   69:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   70:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32        /* deprecated */
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 6
-
-
   71:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
   72:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
   73:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
@@ -349,6 +358,9 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  116:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __COMPILER_BARRIER
  117:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __COMPILER_BARRIER()                   __ASM volatile("":::"memory")
  118:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 7
+
+
  119:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  120:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** /* #########################  Startup and Lowlevel Init  ######################## */
  121:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -358,9 +370,6 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  125:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Initializes data and bss sections
  126:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details This default implementations initialized all data and additional bss
  127:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****            sections relying on .copy.table and .zero.table specified properly
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 7
-
-
  128:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****            in the used linker script.
  129:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  130:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -409,6 +418,9 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  173:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __STACK_LIMIT
  174:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #define __STACK_LIMIT             __StackLimit
  175:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 8
+
+
  176:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  177:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __VECTOR_TABLE
  178:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #define __VECTOR_TABLE            __Vectors
@@ -418,9 +430,6 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  182:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #define __VECTOR_TABLE_ATTRIBUTE  __attribute__((used, section(".vectors")))
  183:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  184:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 8
-
-
  185:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #if defined (__ARM_FEATURE_CMSE) && (__ARM_FEATURE_CMSE == 3U)
  186:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __STACK_SEAL
  187:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #define __STACK_SEAL              __StackSeal
@@ -469,6 +478,9 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  230:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  231:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Wait For Interrupt
  232:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Wait For Interrupt is a hint instruction that suspends execution until one of a number o
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 9
+
+
  233:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  234:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #define __WFI()                             __ASM volatile ("wfi":::"memory")
  235:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -478,9 +490,6 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  239:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Wait For Event is a hint instruction that permits the processor to enter
  240:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****            a low-power state until one of a number of events occurs.
  241:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 9
-
-
  242:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #define __WFE()                             __ASM volatile ("wfe":::"memory")
  243:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  244:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -529,6 +538,9 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  287:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Reverse byte order (32 bit)
  288:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Reverses the byte order in unsigned integer value. For example, 0x12345678 becomes 0x785
  289:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    value  Value to reverse
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 10
+
+
  290:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Reversed value
  291:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  292:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __REV(uint32_t value)
@@ -538,9 +550,6 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  296:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #else
  297:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
  298:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 10
-
-
  299:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM ("rev %0, %1" : __CMSIS_GCC_OUT_REG (result) : __CMSIS_GCC_USE_REG (value) );
  300:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   return result;
  301:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -589,6 +598,9 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  344:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Rotated value
  345:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  346:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __ROR(uint32_t op1, uint32_t op2)
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 11
+
+
  347:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** {
  348:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   op2 %= 32U;
  349:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   if (op2 == 0U)
@@ -598,9 +610,6 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  353:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   return (op1 >> op2) | (op1 << (32U - op2));
  354:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** }
  355:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 11
-
-
  356:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  357:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  358:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Breakpoint
@@ -649,6 +658,9 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  401:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \return             number of leading zeros in value
  402:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  403:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint8_t __CLZ(uint32_t value)
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 12
+
+
  404:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** {
  405:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   /* Even though __builtin_clz produces a CLZ instruction on ARM, formally
  406:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****      __builtin_clz(0) is undefined behaviour, so handle this case specially.
@@ -658,9 +670,6 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  410:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****      is non-zero".
  411:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****      ARM GCC 7.3 and possibly earlier will optimise this test away, leaving a
  412:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****      single CLZ instruction.
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 12
-
-
  413:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****    */
  414:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   if (value == 0U)
  415:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   {
@@ -709,6 +718,9 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  458:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #if (__GNUC__ > 4) || (__GNUC__ == 4 && __GNUC_MINOR__ >= 8)
  459:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("ldrexh %0, %1" : "=r" (result) : "Q" (*addr) );
  460:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #else
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 13
+
+
  461:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****     /* Prior to GCC 4.8, "Q" will be expanded to [rx, #0] which is not
  462:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****        accepted by assembler. So has to use following less efficient pattern.
  463:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****     */
@@ -718,9 +730,6 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  467:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** }
  468:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  469:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 13
-
-
  470:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  471:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   LDR Exclusive (32 bit)
  472:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Executes a exclusive LDR instruction for 32 bit values.
@@ -769,6 +778,9 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  515:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****    return(result);
  516:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** }
  517:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 14
+
+
  518:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  519:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  520:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   STR Exclusive (32 bit)
@@ -778,9 +790,6 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  524:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \return          0  Function succeeded
  525:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \return          1  Function failed
  526:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 14
-
-
  527:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __STREXW(uint32_t value, volatile uint32_t *addr)
  528:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** {
  529:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****    uint32_t result;
@@ -829,6 +838,9 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  572:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Saturates an unsigned value.
  573:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]  ARG1  Value to be saturated
  574:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]  ARG2  Bit position to saturate to (0..31)
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 15
+
+
  575:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \return             Saturated value
  576:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  577:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #define __USAT(ARG1, ARG2) \
@@ -838,9 +850,6 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  581:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("usat %0, %1, %2" : "=r" (__RES) :  "I" (ARG2), "r" (__ARG1) : "cc" ); \
  582:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   __RES; \
  583:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  })
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 15
-
-
  584:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  585:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  586:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
@@ -889,6 +898,9 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  629:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  630:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint16_t __LDRHT(volatile uint16_t *ptr)
  631:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 16
+
+
  632:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****     uint32_t result;
  633:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  634:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #if (__GNUC__ > 4) || (__GNUC__ == 4 && __GNUC_MINOR__ >= 8)
@@ -898,9 +910,6 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  638:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****        accepted by assembler. So has to use following less efficient pattern.
  639:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****     */
  640:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("ldrht %0, [%1]" : "=r" (result) : "r" (ptr) : "memory" );
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 16
-
-
  641:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  642:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****    return ((uint16_t) result);    /* Add explicit type cast here */
  643:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** }
@@ -949,6 +958,9 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  686:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   STRT Unprivileged (32 bit)
  687:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Executes a Unprivileged STRT instruction for 32 bit values.
  688:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]  value  Value to store
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 17
+
+
  689:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    ptr  Pointer to location
  690:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  691:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __STRT(uint32_t value, volatile uint32_t *ptr)
@@ -958,9 +970,6 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  695:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  696:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #else  /* ((defined (__ARM_ARCH_7M__      ) && (__ARM_ARCH_7M__      == 1)) || \
  697:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****            (defined (__ARM_ARCH_7EM__     ) && (__ARM_ARCH_7EM__     == 1)) || \
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 17
-
-
  698:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****            (defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1))    ) */
  699:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  700:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
@@ -1009,6 +1018,9 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  743:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****       return 0U;
  744:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****     }
  745:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   }
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 18
+
+
  746:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   return (uint32_t)val;
  747:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** }
  748:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -1018,9 +1030,6 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  752:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  753:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  754:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** #if ((defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)) || \
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 18
-
-
  755:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****      (defined (__ARM_ARCH_8M_BASE__ ) && (__ARM_ARCH_8M_BASE__ == 1))    )
  756:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  757:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Load-Acquire (8 bit)
@@ -1069,6 +1078,9 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  800:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  801:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  802:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Store-Release (8 bit)
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 19
+
+
  803:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Executes a STLB instruction for 8 bit values.
  804:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]  value  Value to store
  805:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    ptr  Pointer to location
@@ -1078,9 +1090,6 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  809:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("stlb %1, %0" : "=Q" (*ptr) : "r" ((uint32_t)value) : "memory" );
  810:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** }
  811:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 19
-
-
  812:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  813:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  814:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Store-Release (16 bit)
@@ -1129,6 +1138,9 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  857:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  858:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint16_t __LDAEXH(volatile uint16_t *ptr)
  859:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 20
+
+
  860:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****     uint32_t result;
  861:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  862:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("ldaexh %0, %1" : "=r" (result) : "Q" (*ptr) : "memory" );
@@ -1138,9 +1150,6 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  866:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  867:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  868:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Load-Acquire Exclusive (32 bit)
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 20
-
-
  869:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Executes a LDA exclusive instruction for 32 bit values.
  870:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    ptr  Pointer to data
  871:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \return        value of type uint32_t at (*ptr)
@@ -1189,6 +1198,9 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  914:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  915:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  916:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 21
+
+
  917:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Store-Release Exclusive (32 bit)
  918:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Executes a STL exclusive instruction for 32 bit values.
  919:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]  value  Value to store
@@ -1198,9 +1210,6 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  923:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  924:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __STLEX(uint32_t value, volatile uint32_t *ptr)
  925:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 21
-
-
  926:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****    uint32_t result;
  927:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  928:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("stlex %0, %2, %1" : "=&r" (result), "=Q" (*ptr) : "r" ((uint32_t)value) : "memo
@@ -1249,18 +1258,18 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  146              		.syntax unified
  147              	.L3:
  148              	.LBE18:
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 22
+
+
  149              	.LBE17:
  150              	.LBE19:
-  32:board/stm32f411ceux_board/Core/Extension/stm32_config.h ****   while (1)
- 151              		.loc 2 32 3 view .LVU43
-  33:board/stm32f411ceux_board/Core/Extension/stm32_config.h ****   {
-  34:board/stm32f411ceux_board/Core/Extension/stm32_config.h ****   }
- 152              		.loc 2 34 3 view .LVU44
-  32:board/stm32f411ceux_board/Core/Extension/stm32_config.h ****   while (1)
- 153              		.loc 2 32 9 view .LVU45
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 22
-
-
+  41:board/stm32f411ceux_board/Core/Extension/stm32_config.h ****   while (1)
+ 151              		.loc 2 41 3 view .LVU43
+  42:board/stm32f411ceux_board/Core/Extension/stm32_config.h ****   {
+  43:board/stm32f411ceux_board/Core/Extension/stm32_config.h ****   }
+ 152              		.loc 2 43 3 view .LVU44
+  41:board/stm32f411ceux_board/Core/Extension/stm32_config.h ****   while (1)
+ 153              		.loc 2 41 9 view .LVU45
  154 006e FEE7     		b	.L3
  155              	.L2:
   49:board/stm32f411ceux_board/Core/Extension/board.c ****   }
@@ -1307,20 +1316,20 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  183              		.loc 1 62 5 is_stmt 1 view .LVU59
  184              	.LBB20:
  185              	.LBI20:
-  29:board/stm32f411ceux_board/Core/Extension/stm32_config.h **** {
- 186              		.loc 2 29 20 view .LVU60
+  38:board/stm32f411ceux_board/Core/Extension/stm32_config.h **** {
+ 186              		.loc 2 38 20 view .LVU60
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 23
+
+
  187              	.LBE20:
-  31:board/stm32f411ceux_board/Core/Extension/stm32_config.h ****   while (1)
- 188              		.loc 2 31 3 view .LVU61
+  40:board/stm32f411ceux_board/Core/Extension/stm32_config.h ****   while (1)
+ 188              		.loc 2 40 3 view .LVU61
  189              	.LBB23:
  190              	.LBB21:
  191              	.LBI21:
  960:board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h **** {
  192              		.loc 3 960 27 view .LVU62
  193              	.LBB22:
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 23
-
-
  194              		.loc 3 962 3 view .LVU63
  195              		.syntax unified
  196              	@ 962 "board/stm32f411ceux_board/Drivers/CMSIS/Include/cmsis_gcc.h" 1
@@ -1332,11 +1341,11 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  202              	.LBE22:
  203              	.LBE21:
  204              	.LBE23:
-  32:board/stm32f411ceux_board/Core/Extension/stm32_config.h ****   {
- 205              		.loc 2 32 3 view .LVU64
- 206              		.loc 2 34 3 view .LVU65
-  32:board/stm32f411ceux_board/Core/Extension/stm32_config.h ****   {
- 207              		.loc 2 32 9 view .LVU66
+  41:board/stm32f411ceux_board/Core/Extension/stm32_config.h ****   {
+ 205              		.loc 2 41 3 view .LVU64
+ 206              		.loc 2 43 3 view .LVU65
+  41:board/stm32f411ceux_board/Core/Extension/stm32_config.h ****   {
+ 207              		.loc 2 41 9 view .LVU66
  208 008e FEE7     		b	.L5
  209              	.L1:
   63:board/stm32f411ceux_board/Core/Extension/board.c ****   }
@@ -1369,6 +1378,9 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  236              		@ frame_needed = 0, uses_anonymous_args = 0
  237 0000 08B5     		push	{r3, lr}
  238              	.LCFI3:
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 24
+
+
  239              		.cfi_def_cfa_offset 8
  240              		.cfi_offset 3, -8
  241              		.cfi_offset 14, -4
@@ -1378,9 +1390,6 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  244              	.LVL3:
   17:board/stm32f411ceux_board/Core/Extension/board.c **** 	  MX_GPIO_Init();
  245              		.loc 1 17 4 view .LVU70
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 24
-
-
  246 0006 FFF7FEFF 		bl	SystemClock_Config
  247              	.LVL4:
   18:board/stm32f411ceux_board/Core/Extension/board.c **** 	  MX_TIM1_Init();
@@ -1419,16 +1428,16 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 1
  277              		.file 14 "board/stm32f411ceux_board/Core/Inc/gpio.h"
  278              		.file 15 "board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
  279              		.file 16 "<built-in>"
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s 			page 25
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s 			page 25
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 board.c
-C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s:18     .text.SystemClock_Config:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s:24     .text.SystemClock_Config:0000000000000000 SystemClock_Config
-C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s:219    .text.SystemClock_Config:0000000000000098 $d
-C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s:225    .text.board_hardware_init:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\ccAV2hDm.s:231    .text.board_hardware_init:0000000000000000 board_hardware_init
+C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s:18     .text.SystemClock_Config:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s:24     .text.SystemClock_Config:0000000000000000 SystemClock_Config
+C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s:219    .text.SystemClock_Config:0000000000000098 $d
+C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s:225    .text.board_hardware_init:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\cc85kgaR.s:231    .text.board_hardware_init:0000000000000000 board_hardware_init
 
 UNDEFINED SYMBOLS
 memset

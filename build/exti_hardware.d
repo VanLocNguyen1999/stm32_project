@@ -1,5 +1,7 @@
-build/main.o: app/main.c \
- board/stm32f411ceux_board//Core/Extension/stm32_config.h \
+build/exti_hardware.o: \
+ board/stm32f411ceux_board/Core/Extension/exti_hardware.c \
+ board/stm32f411ceux_board/Core/Extension/exti_hardware.h \
+ board/stm32f411ceux_board/Core/Extension/stm32_config.h \
  board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  board/stm32f411ceux_board/Core/Inc/stm32f4xx_hal_conf.h \
  board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -36,15 +38,10 @@ build/main.o: app/main.c \
  board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h \
  board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_exti.h \
  board/stm32f411ceux_board/Core/Inc/tim.h \
- board/stm32f411ceux_board/Core/Inc/gpio.h \
- board/stm32f411ceux_board//Core/Extension/pwm_hardware.h \
- board/stm32f411ceux_board//Core/Extension/update_interrupt_hardware.h \
  board/stm32f411ceux_board//Core/Extension/stm32_config.h \
- board/stm32f411ceux_board//Core/Extension/board.h \
- board/stm32f411ceux_board//Core/Extension/update_interrupt_hardware.h \
- board/stm32f411ceux_board//Core/Extension/pwm_hardware.h delay/delay.h \
- board/stm32f411ceux_board//Core/Extension/exti_hardware.h
-board/stm32f411ceux_board//Core/Extension/stm32_config.h:
+ board/stm32f411ceux_board/Core/Inc/gpio.h
+board/stm32f411ceux_board/Core/Extension/exti_hardware.h:
+board/stm32f411ceux_board/Core/Extension/stm32_config.h:
 board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 board/stm32f411ceux_board/Core/Inc/stm32f4xx_hal_conf.h:
 board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:
@@ -81,12 +78,5 @@ board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h:
 board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h:
 board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_exti.h:
 board/stm32f411ceux_board/Core/Inc/tim.h:
-board/stm32f411ceux_board/Core/Inc/gpio.h:
-board/stm32f411ceux_board//Core/Extension/pwm_hardware.h:
-board/stm32f411ceux_board//Core/Extension/update_interrupt_hardware.h:
 board/stm32f411ceux_board//Core/Extension/stm32_config.h:
-board/stm32f411ceux_board//Core/Extension/board.h:
-board/stm32f411ceux_board//Core/Extension/update_interrupt_hardware.h:
-board/stm32f411ceux_board//Core/Extension/pwm_hardware.h:
-delay/delay.h:
-board/stm32f411ceux_board//Core/Extension/exti_hardware.h:
+board/stm32f411ceux_board/Core/Inc/gpio.h:

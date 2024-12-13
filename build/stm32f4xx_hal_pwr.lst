@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
   30:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** /** @defgroup PWR PWR
   31:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   * @brief PWR HAL module driver
   32:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   * @{
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 2
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 2
 
 
   33:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
   87:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   * @brief Deinitializes the HAL PWR peripheral registers to their default reset values.
   88:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   * @retval None
   89:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   */
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 3
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 3
 
 
   90:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** void HAL_PWR_DeInit(void)
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
   63              		@ link register save eliminated.
   64 0000 82B0     		sub	sp, sp, #8
   65              	.LCFI0:
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 4
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 4
 
 
   66              		.cfi_def_cfa_offset 8
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
  128:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** void HAL_PWR_DisableBkUpAccess(void)
  129:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** {
  104              		.loc 1 129 1 is_stmt 1 view -0
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 5
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 5
 
 
  105              		.cfi_startproc
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
  141:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   *  @brief Low Power modes configuration functions 
  142:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   *
  143:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** @verbatim
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 6
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 6
 
 
  144:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
  198:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****     [..]
  199:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****       In Stop mode, all clocks in the 1.2V domain are stopped, the PLL, the HSI,
  200:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****       and the HSE RC oscillators are disabled. Internal SRAM and register contents 
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 7
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 7
 
 
  201:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****       are preserved.
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
  255:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****         (++) To wake up from the Stop mode with an RTC Tamper or time stamp event, it 
  256:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****              is necessary to configure the RTC to detect the tamper or time stamp event using the
  257:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****                 HAL_RTCEx_SetTimeStamp_IT() or HAL_RTCEx_SetTamper_IT() functions.
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 8
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 8
 
 
  258:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****                   
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
  174 0020 9A68     		ldr	r2, [r3, #8]
  175 0022 22F48032 		bic	r2, r2, #65536
  176 0026 9A60     		str	r2, [r3, #8]
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 9
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 9
 
 
  288:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   __HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE(); 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
  213 005e 9368     		ldr	r3, [r2, #8]
  214 0060 43F48033 		orr	r3, r3, #65536
  215 0064 9360     		str	r3, [r2, #8]
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 10
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 10
 
 
  216              	.L15:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
  257 0004 1A61     		str	r2, [r3, #16]
  321:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** }
  258              		.loc 1 321 1 view .LVU50
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 11
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 11
 
 
  259 0006 7047     		bx	lr
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
  334:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   * @param WakeUpPinx Specifies the Power Wake-Up pin to enable.
  335:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   *         This parameter can be one of the following values:
  336:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   *           @arg PWR_WAKEUP_PIN1
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 12
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 12
 
 
  337:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   *           @arg PWR_WAKEUP_PIN2 available only on STM32F410xx/STM32F446xx/STM32F412xx/STM32F413x
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
  337              		@ args = 0, pretend = 0, frame = 0
  338              		@ frame_needed = 0, uses_anonymous_args = 0
  339              		@ link register save eliminated.
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 13
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 13
 
 
  361:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   /* Check the parameter */
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
  392:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** {
  365              		.loc 1 392 1 is_stmt 1 view -0
  366              		.cfi_startproc
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 14
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 14
 
 
  367              		@ args = 0, pretend = 0, frame = 0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
  416:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****     }
  417:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** 
  418:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****     /* Request Wait For Event */
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 15
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 15
 
 
  419:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****     __WFE();
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
  439:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   *            @arg PWR_STOPENTRY_WFE              : Enter Stop mode with WFE instruction and
  440:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   *                                                  clear of pending events before.
  441:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   *            @arg PWR_STOPENTRY_WFE_NO_EVT_CLEAR : Enter STOP mode with WFE instruction and
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 16
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 16
 
 
  442:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   *                                                  no clear of pending event before.
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
  460              		.syntax unified
  461              	@ 468 "board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" 1
  462 001e 40BF     		sev
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 17
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 17
 
 
  463              	@ 0 "" 2
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
  510              	HAL_PWR_EnterSTANDBYMode:
  511              	.LFB84:
  477:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** 
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 18
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 18
 
 
  478:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** /**
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
  541              		.cfi_endproc
  542              	.LFE84:
  544              		.section	.text.HAL_PWR_PVDCallback,"ax",%progbits
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 19
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 19
 
 
  545              		.align	1
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
  572              		.loc 1 510 1 view -0
  573              		.cfi_startproc
  574              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 20
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 20
 
 
  575              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
  539:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   * @retval None
  540:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   */
  541:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** void HAL_PWR_EnableSleepOnExit(void)
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 21
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 21
 
 
  542:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** {
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
  657              	.L60:
  658              		.align	2
  659              	.L59:
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 22
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 22
 
 
  660 000c 00ED00E0 		.word	-536810240
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
  575:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   * @retval None
  576:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   */
  577:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** void HAL_PWR_DisableSEVOnPend(void)
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 23
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 23
 
 
  578:board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** {
@@ -1351,60 +1351,60 @@ ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 1
  725              		.file 5 "board/stm32f411ceux_board/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
  726              		.file 6 "board/stm32f411ceux_board/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
  727              		.file 7 "board/stm32f411ceux_board/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h"
-ARM GAS  C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s 			page 24
+ARM GAS  C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s 			page 24
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f4xx_hal_pwr.c
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:18     .text.HAL_PWR_DeInit:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:24     .text.HAL_PWR_DeInit:0000000000000000 HAL_PWR_DeInit
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:46     .text.HAL_PWR_DeInit:0000000000000014 $d
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:51     .text.HAL_PWR_EnableBkUpAccess:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:57     .text.HAL_PWR_EnableBkUpAccess:0000000000000000 HAL_PWR_EnableBkUpAccess
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:90     .text.HAL_PWR_EnableBkUpAccess:0000000000000014 $d
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:96     .text.HAL_PWR_DisableBkUpAccess:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:102    .text.HAL_PWR_DisableBkUpAccess:0000000000000000 HAL_PWR_DisableBkUpAccess
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:135    .text.HAL_PWR_DisableBkUpAccess:0000000000000014 $d
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:141    .text.HAL_PWR_ConfigPVD:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:147    .text.HAL_PWR_ConfigPVD:0000000000000000 HAL_PWR_ConfigPVD
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:234    .text.HAL_PWR_ConfigPVD:000000000000007c $d
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:240    .text.HAL_PWR_EnablePVD:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:246    .text.HAL_PWR_EnablePVD:0000000000000000 HAL_PWR_EnablePVD
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:263    .text.HAL_PWR_EnablePVD:0000000000000008 $d
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:268    .text.HAL_PWR_DisablePVD:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:274    .text.HAL_PWR_DisablePVD:0000000000000000 HAL_PWR_DisablePVD
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:291    .text.HAL_PWR_DisablePVD:0000000000000008 $d
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:296    .text.HAL_PWR_EnableWakeUpPin:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:302    .text.HAL_PWR_EnableWakeUpPin:0000000000000000 HAL_PWR_EnableWakeUpPin
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:321    .text.HAL_PWR_EnableWakeUpPin:000000000000000c $d
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:326    .text.HAL_PWR_DisableWakeUpPin:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:332    .text.HAL_PWR_DisableWakeUpPin:0000000000000000 HAL_PWR_DisableWakeUpPin
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:351    .text.HAL_PWR_DisableWakeUpPin:000000000000000c $d
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:356    .text.HAL_PWR_EnterSLEEPMode:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:362    .text.HAL_PWR_EnterSLEEPMode:0000000000000000 HAL_PWR_EnterSLEEPMode
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:419    .text.HAL_PWR_EnterSLEEPMode:0000000000000020 $d
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:424    .text.HAL_PWR_EnterSTOPMode:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:430    .text.HAL_PWR_EnterSTOPMode:0000000000000000 HAL_PWR_EnterSTOPMode
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:498    .text.HAL_PWR_EnterSTOPMode:0000000000000034 $d
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:504    .text.HAL_PWR_EnterSTANDBYMode:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:510    .text.HAL_PWR_EnterSTANDBYMode:0000000000000000 HAL_PWR_EnterSTANDBYMode
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:539    .text.HAL_PWR_EnterSTANDBYMode:0000000000000018 $d
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:545    .text.HAL_PWR_PVDCallback:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:551    .text.HAL_PWR_PVDCallback:0000000000000000 HAL_PWR_PVDCallback
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:564    .text.HAL_PWR_PVD_IRQHandler:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:570    .text.HAL_PWR_PVD_IRQHandler:0000000000000000 HAL_PWR_PVD_IRQHandler
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:604    .text.HAL_PWR_PVD_IRQHandler:000000000000001c $d
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:609    .text.HAL_PWR_EnableSleepOnExit:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:615    .text.HAL_PWR_EnableSleepOnExit:0000000000000000 HAL_PWR_EnableSleepOnExit
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:632    .text.HAL_PWR_EnableSleepOnExit:000000000000000c $d
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:637    .text.HAL_PWR_DisableSleepOnExit:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:643    .text.HAL_PWR_DisableSleepOnExit:0000000000000000 HAL_PWR_DisableSleepOnExit
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:660    .text.HAL_PWR_DisableSleepOnExit:000000000000000c $d
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:665    .text.HAL_PWR_EnableSEVOnPend:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:671    .text.HAL_PWR_EnableSEVOnPend:0000000000000000 HAL_PWR_EnableSEVOnPend
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:688    .text.HAL_PWR_EnableSEVOnPend:000000000000000c $d
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:693    .text.HAL_PWR_DisableSEVOnPend:0000000000000000 $t
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:699    .text.HAL_PWR_DisableSEVOnPend:0000000000000000 HAL_PWR_DisableSEVOnPend
-C:\Users\vanlo\AppData\Local\Temp\cc1vcpUU.s:716    .text.HAL_PWR_DisableSEVOnPend:000000000000000c $d
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:18     .text.HAL_PWR_DeInit:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:24     .text.HAL_PWR_DeInit:0000000000000000 HAL_PWR_DeInit
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:46     .text.HAL_PWR_DeInit:0000000000000014 $d
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:51     .text.HAL_PWR_EnableBkUpAccess:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:57     .text.HAL_PWR_EnableBkUpAccess:0000000000000000 HAL_PWR_EnableBkUpAccess
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:90     .text.HAL_PWR_EnableBkUpAccess:0000000000000014 $d
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:96     .text.HAL_PWR_DisableBkUpAccess:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:102    .text.HAL_PWR_DisableBkUpAccess:0000000000000000 HAL_PWR_DisableBkUpAccess
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:135    .text.HAL_PWR_DisableBkUpAccess:0000000000000014 $d
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:141    .text.HAL_PWR_ConfigPVD:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:147    .text.HAL_PWR_ConfigPVD:0000000000000000 HAL_PWR_ConfigPVD
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:234    .text.HAL_PWR_ConfigPVD:000000000000007c $d
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:240    .text.HAL_PWR_EnablePVD:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:246    .text.HAL_PWR_EnablePVD:0000000000000000 HAL_PWR_EnablePVD
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:263    .text.HAL_PWR_EnablePVD:0000000000000008 $d
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:268    .text.HAL_PWR_DisablePVD:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:274    .text.HAL_PWR_DisablePVD:0000000000000000 HAL_PWR_DisablePVD
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:291    .text.HAL_PWR_DisablePVD:0000000000000008 $d
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:296    .text.HAL_PWR_EnableWakeUpPin:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:302    .text.HAL_PWR_EnableWakeUpPin:0000000000000000 HAL_PWR_EnableWakeUpPin
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:321    .text.HAL_PWR_EnableWakeUpPin:000000000000000c $d
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:326    .text.HAL_PWR_DisableWakeUpPin:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:332    .text.HAL_PWR_DisableWakeUpPin:0000000000000000 HAL_PWR_DisableWakeUpPin
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:351    .text.HAL_PWR_DisableWakeUpPin:000000000000000c $d
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:356    .text.HAL_PWR_EnterSLEEPMode:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:362    .text.HAL_PWR_EnterSLEEPMode:0000000000000000 HAL_PWR_EnterSLEEPMode
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:419    .text.HAL_PWR_EnterSLEEPMode:0000000000000020 $d
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:424    .text.HAL_PWR_EnterSTOPMode:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:430    .text.HAL_PWR_EnterSTOPMode:0000000000000000 HAL_PWR_EnterSTOPMode
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:498    .text.HAL_PWR_EnterSTOPMode:0000000000000034 $d
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:504    .text.HAL_PWR_EnterSTANDBYMode:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:510    .text.HAL_PWR_EnterSTANDBYMode:0000000000000000 HAL_PWR_EnterSTANDBYMode
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:539    .text.HAL_PWR_EnterSTANDBYMode:0000000000000018 $d
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:545    .text.HAL_PWR_PVDCallback:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:551    .text.HAL_PWR_PVDCallback:0000000000000000 HAL_PWR_PVDCallback
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:564    .text.HAL_PWR_PVD_IRQHandler:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:570    .text.HAL_PWR_PVD_IRQHandler:0000000000000000 HAL_PWR_PVD_IRQHandler
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:604    .text.HAL_PWR_PVD_IRQHandler:000000000000001c $d
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:609    .text.HAL_PWR_EnableSleepOnExit:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:615    .text.HAL_PWR_EnableSleepOnExit:0000000000000000 HAL_PWR_EnableSleepOnExit
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:632    .text.HAL_PWR_EnableSleepOnExit:000000000000000c $d
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:637    .text.HAL_PWR_DisableSleepOnExit:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:643    .text.HAL_PWR_DisableSleepOnExit:0000000000000000 HAL_PWR_DisableSleepOnExit
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:660    .text.HAL_PWR_DisableSleepOnExit:000000000000000c $d
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:665    .text.HAL_PWR_EnableSEVOnPend:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:671    .text.HAL_PWR_EnableSEVOnPend:0000000000000000 HAL_PWR_EnableSEVOnPend
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:688    .text.HAL_PWR_EnableSEVOnPend:000000000000000c $d
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:693    .text.HAL_PWR_DisableSEVOnPend:0000000000000000 $t
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:699    .text.HAL_PWR_DisableSEVOnPend:0000000000000000 HAL_PWR_DisableSEVOnPend
+C:\Users\vanlo\AppData\Local\Temp\ccnfC1iI.s:716    .text.HAL_PWR_DisableSEVOnPend:000000000000000c $d
 
 NO UNDEFINED SYMBOLS
