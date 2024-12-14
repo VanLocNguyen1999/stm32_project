@@ -11,6 +11,7 @@ static inline void update_it_hw_start(void) ;
 
 void update_1khz_it_hw_init_ex(void) {
 
+	update_it_hw_set_freq(1000);
 	update_it_hw_start();
 	NVIC_SetPriority(UPDATE_1KHZ_ISR_IRQ,
 			NVIC_EncodePriority(NVIC_GetPriorityGrouping(), 1, 0));
@@ -30,3 +31,10 @@ void update_it_hw_change_freq(const uint32_t freq_Hz) {
 	UPDATE_1KHZ_ISR_TIMER->ARR = result;
 }
 
+void update_1khz_it_hw_enable(void) {
+    NVIC_EnableIRQ(UPDATE_1KHZ_ISR_IRQ);
+}
+
+void update_1khz_it_hw_disable(void) {
+    NVIC_DisableIRQ(UPDATE_1KHZ_ISR_IRQ);
+}

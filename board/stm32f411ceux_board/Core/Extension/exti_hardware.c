@@ -7,10 +7,18 @@
 
 #include "exti_hardware.h"
 
-void exti_hardware_init_ex(void){
+void exti_hardware_init_ex(void) {
 
-	NVIC_SetPriority(EXTI3_IRQn,
-			NVIC_EncodePriority(NVIC_GetPriorityGrouping(),
-			1, 0));
+	NVIC_SetPriority(EXTI3_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),
+	INTERRUPT_GPIO, 0));
 	exti_hardware_disable_interrupt();
+}
+
+void exti_hardware_enable_interrupt(void){
+
+	NVIC_EnableIRQ(EXTI3_IRQn);
+}
+void exti_hardware_disable_interrupt(void){
+
+	NVIC_DisableIRQ(EXTI3_IRQn);
 }

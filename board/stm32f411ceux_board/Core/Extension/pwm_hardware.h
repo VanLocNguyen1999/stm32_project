@@ -13,7 +13,7 @@
 #define PWM_TIMER				TIM1
 #define TIMER_COUNTER_TOP		PWM_TIMER->ARR
 
-#define TMR_FRQ_HZ				SYS_CLK
+#define TMR_FRQ_HZ				SYS_TICK
 
 #define HS_PWM		LL_TIM_CHANNEL_CH1
 #define LS_PWM		LL_TIM_CHANNEL_CH1

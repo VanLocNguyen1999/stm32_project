@@ -25,9 +25,18 @@
 #include "tim.h"
 #include "gpio.h"
 #include "stdlib.h"
+#include <stdint.h>
+#include <stdbool.h>
+#define INTERRUPT_GPIO		0UL
+#define INTERRUPT_TIMER		1UL
 
 #define ENABLE 	1			//xoa
 #define DISABLE	0			//xoa
+
+#define SYS_STOP			PWM_DISABLE_OUTPUT
+#define SYS_TICK			48000000UL
+#define SYS_CLOCK			96000000UL
+#define HC_LOCK				(SYS_CLOCK/2)
 
 #define BOARD__INPUT_1_Pin LL_GPIO_PIN_3
 #define BOARD__INPUT_1_GPIO_Port GPIOA
@@ -49,7 +58,5 @@ static inline void Error_Handler(void)
 
 #define FORCE_INLINE    inline __attribute__((always_inline))
 
-#define SYS_STOP			PWM_DISABLE_OUTPUT
-#define SYS_CLK				48000000UL
 
 #endif /* BOARD_STM32F1_CONFIG_STM32F1_CONFIG_H_ */

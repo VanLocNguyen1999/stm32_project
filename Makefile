@@ -67,10 +67,12 @@ $(BOARD)/Core/Src/gpio.c \
 $(BOARD)/Core/Src/tim.c
 
 C_SOURCES +=  \
+$(BOARD)/Core/Extension/stm32_config.c \
 $(BOARD)/Core/Extension/pwm_hardware.c \
 $(BOARD)/Core/Extension/update_interrupt_hardware.c \
 $(BOARD)/Core/Extension/board.c \
 $(BOARD)/Core/Extension/exti_hardware.c \
+$(BOARD)/Core/Extension/interrupt.c \
 #board/lcd_16x2/lcd_16x2.c \
 # C app
 C_SOURCES +=  \

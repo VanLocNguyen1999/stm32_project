@@ -17,14 +17,6 @@
 
 
 void exti_hardware_init_ex(void);
-
-static inline void exti_hardware_enable_interrupt(void){
-
-	NVIC_EnableIRQ(EXTI3_IRQn);
-}
-static inline void exti_hardware_disable_interrupt(void){
-
-	NVIC_DisableIRQ(EXTI3_IRQn);
-}
-
+void exti_hardware_enable_interrupt(void);
+void exti_hardware_disable_interrupt(void);
 #endif /* BOARD_STM32F411CEUX_BOARD_CORE_EXTENSION_EXTI_HARDWARE_H_ */
