@@ -67,18 +67,22 @@ $(BOARD)/Core/Src/gpio.c \
 $(BOARD)/Core/Src/tim.c
 
 C_SOURCES +=  \
-$(BOARD)/Core/Extension/stm32_config.c \
 $(BOARD)/Core/Extension/pwm_hardware.c \
 $(BOARD)/Core/Extension/update_interrupt_hardware.c \
 $(BOARD)/Core/Extension/board.c \
 $(BOARD)/Core/Extension/exti_hardware.c \
 $(BOARD)/Core/Extension/interrupt.c \
-#board/lcd_16x2/lcd_16x2.c \
+$(BOARD)/Core/Extension/lcd_16x2.c \
+$(BOARD)/Core/Extension/keyboard_hardware.c \
 # C app
 C_SOURCES +=  \
 app/main.c \
+app/ISR.c \
 delay/delay.c \
 components/adc_sensor/adc_sensor.c \
+# C services
+C_SOURCES +=  \
+services/project/project.c\
 # ASM sources
 ASM_SOURCES =  \
 $(MCU_STARTUP)
@@ -148,7 +152,8 @@ C_INCLUDES	+=	\
 -Iapp\
 -I$(BOARD)//Core/Extension \
 -Idelay\
--Icomponents/adc_sensor\\
+-Icomponents/adc_sensor\
+-Iservices/project\
 #-Iboard/lcd_16x2 \
 # compile gcc flags
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections

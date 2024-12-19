@@ -19,7 +19,6 @@
 
 /* Includes ------------------------------------------------------------------*/
 //#include "main.h"
-//#include "main.h"
 #include "stm32f4xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -201,23 +200,83 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /**
-  * @brief This function handles EXTI line3 interrupt.
+  * @brief This function handles EXTI line1 interrupt.
   */
+//void EXTI1_IRQHandler(void)
+//{
+//  /* USER CODE BEGIN EXTI1_IRQn 0 */
+//
+//  /* USER CODE END EXTI1_IRQn 0 */
+//  if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_1) != RESET)
+//  {
+//    LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_1);
+//    /* USER CODE BEGIN LL_EXTI_LINE_1 */
+//
+//    /* USER CODE END LL_EXTI_LINE_1 */
+//  }
+//  /* USER CODE BEGIN EXTI1_IRQn 1 */
+//
+//  /* USER CODE END EXTI1_IRQn 1 */
+//}
+//
+///**
+//  * @brief This function handles EXTI line2 interrupt.
+//  */
+//void EXTI2_IRQHandler(void)
+//{
+//  /* USER CODE BEGIN EXTI2_IRQn 0 */
+//
+//  /* USER CODE END EXTI2_IRQn 0 */
+//  if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_2) != RESET)
+//  {
+//    LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_2);
+//    /* USER CODE BEGIN LL_EXTI_LINE_2 */
+//
+//    /* USER CODE END LL_EXTI_LINE_2 */
+//  }
+//  /* USER CODE BEGIN EXTI2_IRQn 1 */
+//
+//  /* USER CODE END EXTI2_IRQn 1 */
+//}
+//
+///**
+//  * @brief This function handles EXTI line3 interrupt.
+//  */
 //void EXTI3_IRQHandler(void)
 //{
 //  /* USER CODE BEGIN EXTI3_IRQn 0 */
-////
+//////
 //  /* USER CODE END EXTI3_IRQn 0 */
 //  if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_3) != RESET)
 //  {
 //    LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_3);
 //    /* USER CODE BEGIN LL_EXTI_LINE_3 */
-////
+//////
 //    /* USER CODE END LL_EXTI_LINE_3 */
 //  }
 //  /* USER CODE BEGIN EXTI3_IRQn 1 */
-////
+//////
 //  /* USER CODE END EXTI3_IRQn 1 */
+//}
+//
+///**
+//  * @brief This function handles EXTI line4 interrupt.
+//  */
+//void EXTI4_IRQHandler(void)
+//{
+//  /* USER CODE BEGIN EXTI4_IRQn 0 */
+//
+//  /* USER CODE END EXTI4_IRQn 0 */
+//  if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_4) != RESET)
+//  {
+//    LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_4);
+//    /* USER CODE BEGIN LL_EXTI_LINE_4 */
+//
+//    /* USER CODE END LL_EXTI_LINE_4 */
+//  }
+//  /* USER CODE BEGIN EXTI4_IRQn 1 */
+//
+//  /* USER CODE END EXTI4_IRQn 1 */
 //}
 //
 ///**
@@ -226,13 +285,13 @@ void SysTick_Handler(void)
 //void TIM2_IRQHandler(void)
 //{
 //  /* USER CODE BEGIN TIM2_IRQn 0 */
-//
+////
 //  /* USER CODE END TIM2_IRQn 0 */
 //  /* USER CODE BEGIN TIM2_IRQn 1 */
-////
+//////
 //  /* USER CODE END TIM2_IRQn 1 */
 //}
-
-/* USER CODE BEGIN 1 */
-
-/* USER CODE END 1 */
+//
+///* USER CODE BEGIN 1 */
+//
+///* USER CODE END 1 */

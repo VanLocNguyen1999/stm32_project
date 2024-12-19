@@ -1,11 +1,12 @@
 /*
  * lcd_16x2.c
  *
- *  Created on: Apr 3, 2024
+ *  Created on: Dec 17, 2024
  *      Author: vanlo
  */
+
+
 #include "lcd_16x2.h"
-#include "gpio.h"
 #include "string.h"
 
 #include "stm32_config.h"
@@ -14,7 +15,7 @@
 void LCD_Init()
 {
   LCD_Send4Bit(0x00);
-  HAL_GPIO_WritePin(GPIOB, LCD_RS_Pin, 0);
+  LL_GPIO_ResetOutputPin(Rs_GPIO_Port,Rs_Pin);
   LCD_Send4Bit(0x03);
   LCD_Enable();
   LCD_Enable();
@@ -30,18 +31,33 @@ void LCD_Init()
 
 void LCD_Enable(void)
 {
-	HAL_GPIO_WritePin(GPIOB, LCD_EN_Pin, GPIO_PIN_SET);
-    delayms(1);
-    HAL_GPIO_WritePin(GPIOB, LCD_EN_Pin, GPIO_PIN_RESET);
-    delayms(1);
+	LL_GPIO_SetOutputPin(En_GPIO_Port, En_Pin);
+    delay_ms(1);
+    LL_GPIO_ResetOutputPin(En_GPIO_Port, En_Pin);
+    delay_ms(1);
 }
 
-void LCD_Send4Bit(unsigned char Data)
+void LCD_Send4Bit_LL(unsigned char Data)
 {
-  HAL_GPIO_WritePin(GPIOA, LCD_D4_Pin, Data & 0x01);
-  HAL_GPIO_WritePin(GPIOA, LCD_D5_Pin, (Data>>1)&1);
-  HAL_GPIO_WritePin(GPIOA, LCD_D6_Pin, (Data>>2)&1);
-  HAL_GPIO_WritePin(GPIOA, LCD_D7_Pin, (Data>>3)&1);
+    if (Data & 0x01)
+        LL_GPIO_SetOutputPin(D4_GPIO_Port, D4_Pin);
+    else
+        LL_GPIO_ResetOutputPin(D4_GPIO_Port, D4_Pin);
+
+    if ((Data >> 1) & 0x01)
+        LL_GPIO_SetOutputPin(D5_GPIO_Port, D5_Pin);
+    else
+        LL_GPIO_ResetOutputPin(D5_GPIO_Port, D5_Pin);
+
+    if ((Data >> 2) & 0x01)
+        LL_GPIO_SetOutputPin(D6_GPIO_Port, D6_Pin);
+    else
+        LL_GPIO_ResetOutputPin(D6_GPIO_Port, D6_Pin);
+
+    if ((Data >> 3) & 0x01)
+        LL_GPIO_SetOutputPin(D7_GPIO_Port,D7_Pin);
+    else
+        LL_GPIO_ResetOutputPin(D7_GPIO_Port,D7_Pin);
 }
 
 void LCD_SendCommand(unsigned char command)
@@ -56,7 +72,7 @@ void LCD_SendCommand(unsigned char command)
 void LCD_Clear()
 {
   LCD_SendCommand(0x01);
-  delayus(10);
+  delay_us(10);
 }
 void LCD_Gotoxy(unsigned char x, unsigned char y) {
 
@@ -68,9 +84,9 @@ void LCD_Gotoxy(unsigned char x, unsigned char y) {
 
 void LCD_PutChar(unsigned char Data) {
 
-	HAL_GPIO_WritePin(GPIOB, LCD_RS_Pin,GPIO_PIN_SET);
+	LL_GPIO_SetOutputPin(Rs_GPIO_Port,Rs_Pin);
 	LCD_SendCommand(Data);
-	HAL_GPIO_WritePin(GPIOB, LCD_RS_Pin, GPIO_PIN_RESET);
+	LL_GPIO_ResetOutputPin(Rs_GPIO_Port,Rs_Pin);
 }
 
 void LCD_Puts(char *s)

@@ -5,13 +5,15 @@
 #include "delay.h"
 #include "exti_hardware.h"
 #include "interrupt.h"
+#include "keyboard_hardware.h"
+#include "project.h"
 
 uint32_t counter;
-bool sate_1;
-bool sate_2;
-bool sate_3;
-
+uint32_t test;
 #define STM32_PROJECT_UPDATE_1KHZ_ISR_HANDLER  TIM2_IRQHandler(void)
+
+
+Project project;
 
 void stm32_project_init(void);
 int main(void) {
@@ -26,29 +28,17 @@ int main(void) {
 
 void stm32_project_init(void) {
 
+	__disable_irq();
 	board_hardware_init();
-	disable_all_interrupt();
-	interrupt_hardware_init();
-	interrupt_hardware_enable();
-	enable_all_interrupt();
+	project_init(&project);
+	exti_hardware_init_ex();
+	update_1khz_it_hw_init_ex();
+	update_1khz_it_hw_enable();
+	exti_hardware_enable_interrupt();
+	__enable_irq();
 }
-void STM32_PROJECT_UPDATE_1KHZ_ISR_HANDLER{
+void STM32_PROJECT_UPDATE_1KHZ_ISR_HANDLER {
 
-	BOARD_TP1_TOGGLEPIN;
-	counter ++;
-	if(counter > 5000){
-
-		counter = 0;
-	}
-	UPDATE_1KHZ_ISR_CLEAR_FLAG;
+		UPDATE_1KHZ_ISR_CLEAR_FLAG;
 }
 
-void UPDATE_EXTI_ISR_IRQ {
-
-	if (UPDATE_EXTI_ISR_FLAG) {
-		counter = 1;
-	} else {
-		counter = 10;
-	}
-
-}

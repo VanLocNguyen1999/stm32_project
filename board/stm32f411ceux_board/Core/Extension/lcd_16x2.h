@@ -1,12 +1,13 @@
 /*
  * lcd_16x2.h
  *
- *  Created on: Apr 3, 2024
+ *  Created on: Dec 17, 2024
  *      Author: vanlo
  */
 
-#ifndef BOARD_LCD_16X2_LCD_16X2_H_
-#define BOARD_LCD_16X2_LCD_16X2_H_
+#ifndef BOARD_STM32F411CEUX_BOARD_CORE_EXTENSION_LCD_16X2_H_
+#define BOARD_STM32F411CEUX_BOARD_CORE_EXTENSION_LCD_16X2_H_
+
 
 #define SET_DDRAM_ADDRESS_LINE_1	 	     	0x80 // đia chỉ cua vị tri đầu tiên dong 1
 #define SET_DDRAM_ADDRESS_LINE_2	 	     	0xC0 // đia chỉ cua vị tri đầu tiên dong 2
@@ -28,5 +29,4 @@ void LCD_Init();
 void LCD_Gotoxy(unsigned char x, unsigned char y);
 void LCD_PutChar(unsigned char Data);
 void LCD_Puts(char *s);
-
-#endif /* BOARD_LCD_16X2_LCD_16X2_H_ */
+#endif /* BOARD_STM32F411CEUX_BOARD_CORE_EXTENSION_LCD_16X2_H_ */
