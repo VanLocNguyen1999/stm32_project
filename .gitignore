@@ -1,0 +1,60 @@
+# Tệp nhị phân và tệp tạm thời
+*.elf
+*.hex
+*.bin
+*.swp
+*.swo
+tags
+*.fuse*
+*.d
+*.lst
+*.map
+*.o
+*.out
+*.TMP
+*.tmp
+*.bak
+*.swp
+*.nib
+
+# Thư mục tạm thời
+Objects/
+Listings/
+build/
+bin/
+tmp/
+.settings/
+.metadata
+.Default/
+.externalToolBuilders/
+.apt_generated/
+
+# Tệp IDE và cấu hình cụ thể
+.project
+.loadpath
+.recommenders
+*.launch
+.cproject
+.pydevproject
+.buildpath
+.factorypath
+.autotools
+.texlipse
+.springBeans
+
+# Tệp tạm thời Excel
+*.xls#
+
+# Tệp từ JLink
+JLink*
+
+# Tệp từ Keil uVision
+*.uvoptx
+*.uvprojx
+/*.uvoptx
+project.uvguix.*
+
+# Tệp Scala IDE
+.cache-main
+.scala_dependencies
+.worksheet
