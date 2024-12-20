@@ -9,15 +9,22 @@
 
 void exti_hardware_init_ex(void) {
 
-	NVIC_SetPriority(EXTI1_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),
-	INTERRUPT_GPIO, 0));
-	NVIC_SetPriority(EXTI2_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),
-	INTERRUPT_GPIO, 0));
-	NVIC_SetPriority(EXTI3_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),
-	INTERRUPT_GPIO, 0));
-	NVIC_SetPriority(EXTI4_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),
-	INTERRUPT_GPIO, 0));
-	exti_hardware_disable_interrupt();
+	NVIC_SetPriority(EXTI1_IRQn,
+			NVIC_EncodePriority(NVIC_GetPriorityGrouping(), 1, 0));
+	NVIC_DisableIRQ(EXTI1_IRQn);
+
+	NVIC_SetPriority(EXTI2_IRQn,
+			NVIC_EncodePriority(NVIC_GetPriorityGrouping(), 1, 0));
+	NVIC_DisableIRQ(EXTI2_IRQn);
+
+	NVIC_SetPriority(EXTI3_IRQn,
+			NVIC_EncodePriority(NVIC_GetPriorityGrouping(), 1, 0));
+	NVIC_DisableIRQ(EXTI3_IRQn);
+
+	NVIC_SetPriority(EXTI4_IRQn,
+			NVIC_EncodePriority(NVIC_GetPriorityGrouping(), 1, 0));
+	NVIC_DisableIRQ(EXTI4_IRQn);
+
 }
 
 void exti_hardware_enable_interrupt(void){

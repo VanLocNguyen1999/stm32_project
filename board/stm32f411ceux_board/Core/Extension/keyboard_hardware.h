@@ -46,4 +46,8 @@ static inline void keyboard_rows_set(const uint8_t rows){
     else if ((rows) == 4) { R1_RESET; R2_RESET; R3_RESET; R4_SET; }
 }
 
+static inline void keyboard_columns_set(Keyboard* keyboard, uint8_t columns){
+
+	keyboard->columns = columns;
+}
 #endif /* BOARD_STM32F411CEUX_BOARD_CORE_EXTENSION_KEYBOARD_HARDWARE_H_ */
