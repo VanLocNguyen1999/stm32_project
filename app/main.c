@@ -45,55 +45,43 @@ void stm32_project_init(void) {
 	update_1khz_it_hw_enable();
 	exti_hardware_enable_interrupt();
 	init_state = INIT_STATE__1_ISR_OK;
-	project_keyboard_columns_set(&project, 1);
 	__enable_irq();
 	init_state = INIT_STATE__5_COMPLETED;
 }
 void STM32_PROJECT_UPDATE_1KHZ_ISR_HANDLER {
-
-		UPDATE_1KHZ_ISR_CLEAR_FLAG;
+	project_keyboard_update_columns(&project);
+	UPDATE_1KHZ_ISR_CLEAR_FLAG;
 }
 
 void UPDATE_EXTI_C1_ISR_IRQ(void) {
 
-	project.state = UPDATE_EXTI_C1_ISR_FLAG;
 	if (UPDATE_EXTI_C1_ISR_FLAG) {
-
-		project_keyboard_columns_set(&project, 1);
+		project_keyboard_set_states_columns(&project,1);
 		UPDATE_EXTI_C1_ISR_CLEAR_FLAG;
-	} else {
-		project_keyboard_columns_set(&project, 0);
 	}
 }
 
 void UPDATE_EXTI_C2_ISR_IRQ(void) {
 
 	if (UPDATE_EXTI_C2_ISR_FLAG) {
-		project_keyboard_columns_set(&project, 2);
+		project_keyboard_set_states_columns(&project,2);
 		UPDATE_EXTI_C2_ISR_CLEAR_FLAG;
-	} else {
-		project_keyboard_columns_set(&project, 0);
 	}
 }
 
 void UPDATE_EXTI_C3_ISR_IRQ(void) {
 
 	if (UPDATE_EXTI_C3_ISR_FLAG) {
-		project_keyboard_columns_set(&project, 3);
+		project_keyboard_set_states_columns(&project,3);
 		UPDATE_EXTI_C3_ISR_CLEAR_FLAG;
-	} else {
-		project_keyboard_columns_set(&project, 0);
 	}
 }
 
 void UPDATE_EXTI_C4_ISR_IRQ(void) {
 
 	if (UPDATE_EXTI_C4_ISR_FLAG) {
-		project_keyboard_columns_set(&project, 4);
-
+		project_keyboard_set_states_columns(&project,4);
 		UPDATE_EXTI_C4_ISR_CLEAR_FLAG;
-	} else {
-		project_keyboard_columns_set(&project, 0);
 	}
 }
 

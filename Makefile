@@ -83,6 +83,7 @@ components/adc_sensor/adc_sensor.c \
 # C services
 C_SOURCES +=  \
 services/project/project.c\
+services/fifo_queue/fifo_queue.c\
 # ASM sources
 ASM_SOURCES =  \
 $(MCU_STARTUP)
@@ -154,6 +155,7 @@ C_INCLUDES	+=	\
 -Idelay\
 -Icomponents/adc_sensor\
 -Iservices/project\
+-Iservices/fifo_queue\
 #-Iboard/lcd_16x2 \
 # compile gcc flags
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections

@@ -29,10 +29,10 @@ Keyboard* keyboard_create(void);
 void keyboard_init(Keyboard *keyboard);
 struct Keyboard_t{
 //
-//	bool c1_state;
-//	bool c2_state;
-//	bool c3_state;
-//	bool c4_state;
+	uint8_t c1_state;
+	uint8_t c2_state;
+	uint8_t c3_state;
+	uint8_t c4_state;
 
 	uint8_t columns;
 	uint8_t rows;
@@ -46,8 +46,36 @@ static inline void keyboard_rows_set(const uint8_t rows){
     else if ((rows) == 4) { R1_RESET; R2_RESET; R3_RESET; R4_SET; }
 }
 
-static inline void keyboard_columns_set(Keyboard* keyboard, uint8_t columns){
+static inline void keyboard_update_columns(Keyboard* keyboard){
 
+	uint8_t columns = keyboard->c1_state + keyboard->c2_state
+			+ keyboard->c3_state + keyboard->c4_state;
 	keyboard->columns = columns;
 }
+static inline uint8_t keyboard_get_columns(Keyboard* keyboard){
+
+	return keyboard->columns;
+}
+
+static inline void keyboard_set_states_columns(Keyboard *keyboard,uint8_t columns) {
+	// Đặt trạng thái của cột dựa trên giá trị của columns
+	if (columns == 1) {
+		keyboard->c1_state = 1;
+		keyboard->c2_state = keyboard->c3_state = keyboard->c4_state = 0;
+	} else if (columns == 2) {
+		keyboard->c2_state = 2;
+		keyboard->c1_state = keyboard->c3_state = keyboard->c4_state = 0;
+	} else if (columns == 3) {
+		keyboard->c3_state = 3;
+		keyboard->c2_state = keyboard->c1_state = keyboard->c4_state = 0;
+	} else if (columns == 4) {
+		keyboard->c4_state = 4;
+		keyboard->c2_state = keyboard->c3_state = keyboard->c1_state = 0;
+	} else {
+		// Xử lý mặc định nếu columns không hợp lệ
+		keyboard->c1_state = keyboard->c2_state = keyboard->c3_state =
+				keyboard->c4_state = 0;
+	}
+}
+
 #endif /* BOARD_STM32F411CEUX_BOARD_CORE_EXTENSION_KEYBOARD_HARDWARE_H_ */
