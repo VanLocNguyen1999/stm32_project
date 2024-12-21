@@ -44,16 +44,15 @@
 
 #define C1_Pin LL_GPIO_PIN_1
 #define C1_GPIO_Port GPIOA
-#define C1_EXTI_IRQn EXTI1_IRQn
 #define C2_Pin LL_GPIO_PIN_2
 #define C2_GPIO_Port GPIOA
-#define C2_EXTI_IRQn EXTI2_IRQn
 #define C3_Pin LL_GPIO_PIN_3
 #define C3_GPIO_Port GPIOA
-#define C3_EXTI_IRQn EXTI3_IRQn
 #define C4_Pin LL_GPIO_PIN_4
 #define C4_GPIO_Port GPIOA
-#define C4_EXTI_IRQn EXTI4_IRQn
+#define EXTI5_Pin LL_GPIO_PIN_5
+#define EXTI5_GPIO_Port GPIOA
+#define EXTI5_EXTI_IRQn EXTI9_5_IRQn
 #define Rs_Pin LL_GPIO_PIN_12
 #define Rs_GPIO_Port GPIOB
 #define Rw_Pin LL_GPIO_PIN_13

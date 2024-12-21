@@ -17,33 +17,24 @@
 #include "interrupt.h"
 #include "keyboard_hardware.h"
 #include "fifo_queue.h"
+#include "keyboard_code.h"
 
 typedef struct Project_t Project;
-static inline void project_keyboard_update_columns(Project* p_project);
-static inline uint8_t project_keyboard_get_columns(Project* p_project);
+
+
+void project_update_keyboard_code(Project* p_project);
+static inline void project_keyboard_code_scan_columns(Project* p_project);
 
 struct Project_t{
 
-	Keyboard keyboard;
-	Fifo_queue keyboard_code;
-
+	Keyboard_code keyboard_code;
 	uint8_t state;
 };
 
 void project_init(Project* p_project);
 
-static inline void project_keyboard_update_columns(Project* p_project){
+static inline void project_keyboard_code_scan_columns(Project* p_project){
 
-	keyboard_update_columns(&p_project->keyboard);
-}
-
-static inline uint8_t project_keyboard_get_columns(Project* p_project){
-
-	return keyboard_get_columns(&p_project->keyboard);
-}
-
-static inline void project_keyboard_set_states_columns(Project* p_project, uint8_t columns){
-
-	keyboard_set_states_columns(&p_project->keyboard, columns);
+	keyboard_code_scan_columns(&p_project->keyboard_code);
 }
 #endif /* SERVICES_PROJECT_PROJECT_H_ */

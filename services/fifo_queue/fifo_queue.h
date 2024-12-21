@@ -7,7 +7,6 @@
 
 #ifndef SERVICES_FIFO_QUEUE_FIFO_QUEUE_H_
 #define SERVICES_FIFO_QUEUE_FIFO_QUEUE_H_
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -79,5 +78,4 @@ static inline void fifo_queue_dequeue(Fifo_queue *fifo_queue){
 		fifo_queue->head = (fifo_queue->head + 1 >= BUFFER_SIZE) ? 0 : fifo_queue->head + 1;
 	}
 }
-
 #endif /* SERVICES_FIFO_QUEUE_FIFO_QUEUE_H_ */

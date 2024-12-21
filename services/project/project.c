@@ -8,8 +8,11 @@
 
 void project_init(Project* p_project){
 
-	keyboard_init(&p_project->keyboard);
-	fifo_queue_init(&p_project->keyboard_code);
-
+	keyboard_code_init(&p_project->keyboard_code);
 	p_project->state = 0;
+}
+
+void project_update_keyboard_code(Project* p_project){
+
+	keyboard_code_update_code(&p_project->keyboard_code);
 }

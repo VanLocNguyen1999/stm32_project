@@ -10,10 +10,10 @@
 
 uint32_t counter;
 uint32_t test;
-#define STM32_PROJECT_UPDATE_1KHZ_ISR_HANDLER  TIM2_IRQHandler(void)
+uint32_t check = 1;
 
-uint32_t state_1 ;
-uint32_t state_2 ;
+#define STM32_PROJECT_UPDATE_1KHZ_ISR_HANDLER  TIM2_IRQHandler(void)
+#define SYSTEM_TICK_UPDATE		HAL_IncTick
 Project project;
 
 typedef enum
@@ -30,6 +30,7 @@ int main(void) {
 //	delay_ms(1);
 	stm32_project_init();
 	while (1) {
+
 
 	}
 
@@ -49,40 +50,21 @@ void stm32_project_init(void) {
 	init_state = INIT_STATE__5_COMPLETED;
 }
 void STM32_PROJECT_UPDATE_1KHZ_ISR_HANDLER {
-	project_keyboard_update_columns(&project);
+	project_keyboard_code_scan_columns(&project);
+	project_update_keyboard_code(&project);
 	UPDATE_1KHZ_ISR_CLEAR_FLAG;
 }
 
-void UPDATE_EXTI_C1_ISR_IRQ(void) {
+void UPDATE_EXTI9_5_ISR_IRQ(void) {
 
-	if (UPDATE_EXTI_C1_ISR_FLAG) {
-		project_keyboard_set_states_columns(&project,1);
-		UPDATE_EXTI_C1_ISR_CLEAR_FLAG;
+	if (UPDATE_EXTI9_5_ISR_FLAG) {
+		UPDATE_EXTI9_5_ISR_CLEAR_FLAG;
 	}
 }
 
-void UPDATE_EXTI_C2_ISR_IRQ(void) {
+void SYSTEM_TICK_UPDATE(void){
 
-	if (UPDATE_EXTI_C2_ISR_FLAG) {
-		project_keyboard_set_states_columns(&project,2);
-		UPDATE_EXTI_C2_ISR_CLEAR_FLAG;
-	}
+	project_keyboard_code_scan_columns(&project);
+
 }
-
-void UPDATE_EXTI_C3_ISR_IRQ(void) {
-
-	if (UPDATE_EXTI_C3_ISR_FLAG) {
-		project_keyboard_set_states_columns(&project,3);
-		UPDATE_EXTI_C3_ISR_CLEAR_FLAG;
-	}
-}
-
-void UPDATE_EXTI_C4_ISR_IRQ(void) {
-
-	if (UPDATE_EXTI_C4_ISR_FLAG) {
-		project_keyboard_set_states_columns(&project,4);
-		UPDATE_EXTI_C4_ISR_CLEAR_FLAG;
-	}
-}
-
 
