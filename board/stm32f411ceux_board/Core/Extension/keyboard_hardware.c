@@ -26,24 +26,31 @@ Keyboard_hardware* keyboard_hardware_create(void){
 void keyboard_hardware_init(Keyboard_hardware *keyboard){
 
 	keyboard->columns_check = 1;
+	keyboard->rows_check = 1;
 
 	keyboard->columns = 0;
-	keyboard->rows    = 1;
+	keyboard->rows    = 0;
 
 	keyboard->keyboard_counter = 0;
 	keyboard->key_active = FLASE;
 }
 
 OPTIMIZE_ATTR void keyboard_hardware_scan(Keyboard_hardware *keyboard) {
-    for (int i = 1; i < 5; i++) {
-        keyboard_hardware_rows_set(i);
-        keyboard_hardware_scan_columns(keyboard);
-        if (keyboard->columns) {
-            keyboard->rows = i - 1;
-            return;
-        }
-    }
-    keyboard->rows = -1;
+
+	keyboard_hardware_rows_set(keyboard->rows_check);
+	keyboard_hardware_scan_columns(keyboard);
+	if (keyboard->columns) {
+
+		keyboard->rows = keyboard->rows_check;
+		return;
+	} else {
+
+		keyboard->rows = 0;
+		if (keyboard->columns_check > 4) {
+
+			keyboard->rows_check = (keyboard->rows_check % 4) + 1;
+		}
+	}
 }
 
 OPTIMIZE_ATTR char keyboard_hardware_update_code(Keyboard_hardware *keyboard) {

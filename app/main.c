@@ -50,7 +50,8 @@ void stm32_project_init(void) {
 	init_state = INIT_STATE__5_COMPLETED;
 }
 void STM32_PROJECT_UPDATE_1KHZ_ISR_HANDLER {
-	project_keyboard_code_scan_columns(&project);
+
+	project_keyboard_code_scan(&project);
 	project_update_keyboard_code(&project);
 	UPDATE_1KHZ_ISR_CLEAR_FLAG;
 }

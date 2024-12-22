@@ -35,6 +35,7 @@ char keyboard_hardware_update_code(Keyboard_hardware *keyboard);
 struct Keyboard_hardware_t{
 //
 	uint8_t columns_check;
+	uint8_t rows_check;
 
 	uint8_t columns;
 	uint8_t rows;
@@ -88,7 +89,7 @@ static inline void keyboard_hardware_scan_columns(Keyboard_hardware *keyboard) {
         keyboard->keyboard_counter = 0;
         key_active = 0;
         keyboard->columns = 0;
-        keyboard->columns_check = (keyboard->columns_check % 4) + 1;
+        keyboard->columns_check = (keyboard->columns_check % 5) + 1;
     }
 }
 

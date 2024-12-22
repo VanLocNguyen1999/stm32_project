@@ -35,6 +35,11 @@ void project_init(Project* p_project);
 
 static inline void project_keyboard_code_scan_columns(Project* p_project){
 
-	keyboard_code_scan_columns(&p_project->keyboard_code);
+	keyboard_code_scan(&p_project->keyboard_code);
+}
+
+static inline void project_keyboard_code_scan(Project* p_project){
+
+	keyboard_code_scan(&p_project->keyboard_code);
 }
 #endif /* SERVICES_PROJECT_PROJECT_H_ */

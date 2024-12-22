@@ -69,9 +69,9 @@ static inline void keyboard_code_queue_dequeue(Keyboard_code* p_keyboard_code){
 	}
 }
 
-static inline void keyboard_code_scan_columns(Keyboard_code* p_keyboard_code){
+static inline void keyboard_code_scan(Keyboard_code* p_keyboard_code){
 
-	keyboard_hardware_scan_columns(&p_keyboard_code->keyboard);
+	keyboard_hardware_scan(&p_keyboard_code->keyboard);
 }
 
 #endif /* SERVICES_KEYBOARD_CODE_KEYBOARD_CODE_H_ */
