@@ -26,7 +26,6 @@ extern "C" {
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-//#include "main.h"
 
 /* USER CODE BEGIN Includes */
 #include "stm32_config.h"
@@ -38,6 +37,7 @@ extern "C" {
 
 void MX_TIM1_Init(void);
 void MX_TIM2_Init(void);
+void MX_TIM4_Init(void);
 
 /* USER CODE BEGIN Prototypes */
 

@@ -22,11 +22,11 @@
 
 #include "stm32f4xx_ll_exti.h"
 
-#include "tim.h"
-#include "gpio.h"
 #include "stdlib.h"
 #include <stdint.h>
 #include <stdbool.h>
+
+#include "user.h"
 //#include "delay.h"
 #define INTERRUPT_GPIO		1UL
 #define INTERRUPT_TIMER		0UL
@@ -34,13 +34,16 @@
 #define ENABLE 	1			//xoa
 #define DISABLE	0			//xoa
 
-#define TRUE 	1			//xoa
-#define FLASE	0			//xoa
+#define HIGH 	1
+#define LOW		0
+
+#define TRUE 	1
+#define FLASE	0
 
 #define SYS_STOP			PWM_DISABLE_OUTPUT
 #define SYS_TICK			48000000UL
 #define SYS_CLOCK			96000000UL
-#define HC_LOCK				(SYS_CLOCK/2)
+#define HC_LOCK				48000000UL
 
 #define R1_Pin LL_GPIO_PIN_1
 #define R1_GPIO_Port GPIOA
@@ -53,6 +56,10 @@
 #define EXTI5_Pin LL_GPIO_PIN_5
 #define EXTI5_GPIO_Port GPIOA
 #define EXTI5_EXTI_IRQn EXTI9_5_IRQn
+#define HC_TRIG_Pin LL_GPIO_PIN_1
+#define HC_TRIG_GPIO_Port GPIOB
+#define HC_ECHO_Pin LL_GPIO_PIN_2
+#define HC_ECHO_GPIO_Port GPIOB
 #define Rs_Pin LL_GPIO_PIN_12
 #define Rs_GPIO_Port GPIOB
 #define Rw_Pin LL_GPIO_PIN_13

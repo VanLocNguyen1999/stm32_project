@@ -9,7 +9,7 @@
 #define BOARD_STM32F411CEUX_BOARD_CORE_EXTENSION_KEYBOARD_HARDWARE_H_
 
 #include "stm32_config.h"
-#include "delay.h"
+#include "delay_hardware.h"
 
 // hàng _ Rows
 #define R1_SET					LL_GPIO_SetOutputPin(R1_GPIO_Port,R1_Pin)

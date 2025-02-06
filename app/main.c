@@ -42,8 +42,8 @@ void stm32_project_init(void) {
 	board_hardware_init();
 	project_init(&project);
 	exti_hardware_init_ex();
-	update_1khz_it_hw_init_ex();
-	update_1khz_it_hw_enable();
+	update_timer_it_hw_init_ex();
+	update_timer_it_hw_enable();
 	exti_hardware_enable_interrupt();
 	init_state = INIT_STATE__1_ISR_OK;
 	__enable_irq();
@@ -65,7 +65,6 @@ void UPDATE_EXTI9_5_ISR_IRQ(void) {
 
 void SYSTEM_TICK_UPDATE(void){
 
-	project_keyboard_code_scan_columns(&project);
 
 }
 

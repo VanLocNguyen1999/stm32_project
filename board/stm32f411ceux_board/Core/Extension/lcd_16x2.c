@@ -10,34 +10,34 @@
 #include "string.h"
 
 #include "stm32_config.h"
-#include "delay.h"
+#include "delay_hardware.h"
 
-void LCD_Init()
+void lcd_init()
 {
-  LCD_Send4Bit(0x00);
-  LL_GPIO_ResetOutputPin(Rs_GPIO_Port,Rs_Pin);
-  LCD_Send4Bit(0x03);
-  LCD_Enable();
-  LCD_Enable();
-  LCD_Enable();
-  LCD_Send4Bit(0x02);
-  LCD_Enable();
-  LCD_SendCommand(0x28); // giao thuc 4 bit, hien thi 2 hang, ki tu 5x8
-  LCD_SendCommand(0x0C); // cho phep hien thi man hinh
-  LCD_SendCommand(0x06); // tang ID, khong dich khung hinh
-  LCD_SendCommand(0x01); // xoa toan bo khung hinh
+  lcd_send4bit(0x00);
+  ENABLE_LCD;
+  lcd_send4bit(0x03);
+  lcd_enable();
+  lcd_enable();
+  lcd_enable();
+  lcd_send4bit(0x02);
+  lcd_enable();
+  lcd_sendcommand(FOR_BIT); // giao thuc 4 bit, hien thi 2 hang, ki tu 5x8
+  lcd_sendcommand(TURN_ON); // cho phep hien thi man hinh
+  lcd_sendcommand(NEXT_ID); // tang ID, khong dich khung hinh
+  lcd_sendcommand(CLEAR_DISPLAY); // xoa toan bo khung hinh
 }
 
 
-void LCD_Enable(void)
+void lcd_enable(void)
 {
-	LL_GPIO_SetOutputPin(En_GPIO_Port, En_Pin);
+	ENABLE_LCD;
     delay_ms(1);
-    LL_GPIO_ResetOutputPin(En_GPIO_Port, En_Pin);
+    DISABLE_LCD;
     delay_ms(1);
 }
 
-void LCD_Send4Bit_LL(unsigned char Data)
+void lcd_send4bit(unsigned char Data)
 {
     if (Data & 0x01)
         LL_GPIO_SetOutputPin(D4_GPIO_Port, D4_Pin);
@@ -60,40 +60,40 @@ void LCD_Send4Bit_LL(unsigned char Data)
         LL_GPIO_ResetOutputPin(D7_GPIO_Port,D7_Pin);
 }
 
-void LCD_SendCommand(unsigned char command)
+void lcd_sendcommand(unsigned char command)
 {
-  LCD_Send4Bit(command >> 4);
-  LCD_Enable();
-  LCD_Send4Bit(command);
-  LCD_Enable();
+  lcd_send4bit(command >> 4);
+  lcd_enable();
+  lcd_send4bit(command);
+  lcd_enable();
 
 }
 
-void LCD_Clear()
+void lcd_clear()
 {
-  LCD_SendCommand(0x01);
+  lcd_sendcommand(0x01);
   delay_us(10);
 }
-void LCD_Gotoxy(unsigned char x, unsigned char y) {
+void lcd_gotoxy(unsigned char x, unsigned char y) {
 
 	if (y == 0)
-		LCD_SendCommand(SET_DDRAM_ADDRESS_LINE_1 + x);
+		lcd_sendcommand(SET_DDRAM_ADDRESS_LINE_1 + x);
 	else if (y == 1)
-		LCD_SendCommand(SET_DDRAM_ADDRESS_LINE_2 + x);
+		lcd_sendcommand(SET_DDRAM_ADDRESS_LINE_2 + x);
 }
 
-void LCD_PutChar(unsigned char Data) {
+void lcd_putchar(unsigned char Data) {
 
-	LL_GPIO_SetOutputPin(Rs_GPIO_Port,Rs_Pin);
-	LCD_SendCommand(Data);
-	LL_GPIO_ResetOutputPin(Rs_GPIO_Port,Rs_Pin);
+	ENABLE_LCD;
+	lcd_sendcommand(Data);
+	DISABLE_LCD;
 }
 
-void LCD_Puts(char *s)
+void lcd_puts(char *s)
 {
   while (*s)
   {
-    LCD_PutChar(*s);
+    lcd_putchar(*s);
     s++;
   }
 }

@@ -72,6 +72,7 @@ $(BOARD)/Core/Extension/update_interrupt_hardware.c \
 $(BOARD)/Core/Extension/board.c \
 $(BOARD)/Core/Extension/exti_hardware.c \
 $(BOARD)/Core/Extension/interrupt.c \
+$(BOARD)/Core/Extension/hc_sr04.c \
 $(BOARD)/Core/Extension/lcd_16x2.c \
 $(BOARD)/Core/Extension/keyboard_hardware.c \
 # C app

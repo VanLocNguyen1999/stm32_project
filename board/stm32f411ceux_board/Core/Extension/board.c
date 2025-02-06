@@ -6,6 +6,7 @@
  */
 
 #include "board.h"
+#include "delay_hardware.h"
 
 void SystemClock_Config(void);
 
@@ -18,7 +19,9 @@ void board_hardware_init(void){
 	  MX_GPIO_Init();
 	  MX_TIM1_Init();
 	  MX_TIM2_Init();
+	  MX_TIM4_Init();
 	  pwm_hardware_init_ex();
+	  delay_hardware_init_ex();
 }
 
 void SystemClock_Config(void)

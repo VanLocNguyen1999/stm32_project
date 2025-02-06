@@ -27,10 +27,7 @@ void keyboard_code_init(Keyboard_code* p_keyboard_code) {
 	while (p_keyboard_code == NULL) {
 
 	};
-
-	p_keyboard_code->head = 0;
-	p_keyboard_code->tail = 0;
-	p_keyboard_code->size = 0;
+	p_keyboard_code->get_code_state = FLASE;
 	keyboard_hardware_init(&p_keyboard_code->keyboard);
 }
 
@@ -38,16 +35,15 @@ void keyboard_code_update_code(Keyboard_code *p_keyboard_code) {
 
 	char code = keyboard_hardware_update_code(&p_keyboard_code->keyboard);
 	if (code != '\0') {
-		keyboard_code_queue_enqueue(p_keyboard_code, code);
+		keyboard_code_set_code(p_keyboard_code, code);
 	}
 }
 
 
 char keyboard_code__get_code(Keyboard_code *p_keyboard_code) {
 
-	char keyboard_code = '\0';
-
-	keyboard_code = keyboard_code_queue_peek(p_keyboard_code);
+	char keyboard_code = keyboard_code_get_code(p_keyboard_code);
+	p_keyboard_code->keyboard_code = 0;
 	return keyboard_code;
 }
 
