@@ -1,70 +1,46 @@
-#include "stm32_config.h"
-#include "pwm_hardware.h"
-#include "update_interrupt_hardware.h"
+/*
+ * main.c
+ *
+ *  Created on: Mar 1, 2025
+ *      Author: Admin
+ */
+
 #include "board.h"
-#include "delay.h"
-#include "exti_hardware.h"
-#include "interrupt.h"
-#include "keyboard_hardware.h"
-#include "project.h"
 
-uint32_t counter;
-uint32_t test;
-uint32_t check = 1;
+uint16_t AD_RES = 0;
 
-#define STM32_PROJECT_UPDATE_1KHZ_ISR_HANDLER  TIM2_IRQHandler(void)
-#define SYSTEM_TICK_UPDATE		HAL_IncTick
-Project project;
+int main(void){
 
-typedef enum
-{
-	INIT_STATE__0_BEGIN = 0,
-	INIT_STATE__1_ISR_OK = 1,
-	INIT_STATE__5_COMPLETED = 2
-}Init_State_t;
-Init_State_t init_state = INIT_STATE__0_BEGIN;
+	board_hardware_init_ex();
 
-void stm32_project_init(void);
-int main(void) {
+	PWM_TIMER->CCR1 = 0.2*PWM_TIMER_TOP_COUNTER;
+	PWM_STARTUP;
+	PWM_ENABLE_CHANNEL;
+	PWM_ENABLE_OUTPUT;
+    // Calibrate The ADC On Power-Up For Better Accuracy
+    HAL_ADCEx_Calibration_Start(&hadc1);
+	HAL_ADC_Start(&hadc1);
+	// Poll ADC1 Perihperal & TimeOut = 1mSec
+	HAL_ADC_PollForConversion(&hadc1, 100);
+	// Read The ADC Conversion Result & Map It To PWM DutyCycle
+	AD_RES = HAL_ADC_GetValue(&hadc1);
+	while(1){
 
-//	delay_ms(1);
-	stm32_project_init();
-	while (1) {
-
-
-	}
-
-}
-
-void stm32_project_init(void) {
-
-	__disable_irq();
-	board_hardware_init();
-	project_init(&project);
-	exti_hardware_init_ex();
-	update_timer_it_hw_init_ex();
-	update_timer_it_hw_enable();
-	exti_hardware_enable_interrupt();
-	init_state = INIT_STATE__1_ISR_OK;
-	__enable_irq();
-	init_state = INIT_STATE__5_COMPLETED;
-}
-void STM32_PROJECT_UPDATE_1KHZ_ISR_HANDLER {
-
-	project_keyboard_code_scan(&project);
-	project_update_keyboard_code(&project);
-	UPDATE_1KHZ_ISR_CLEAR_FLAG;
-}
-
-void UPDATE_EXTI9_5_ISR_IRQ(void) {
-
-	if (UPDATE_EXTI9_5_ISR_FLAG) {
-		UPDATE_EXTI9_5_ISR_CLEAR_FLAG;
+		// Start ADC Conversion
+		HAL_ADC_Start(&hadc1);
+		// Poll ADC1 Perihperal & TimeOut = 1mSec
+		HAL_ADC_PollForConversion(&hadc1, 100);
+		// Read The ADC Conversion Result & Map It To PWM DutyCycle
+		AD_RES = HAL_ADC_GetValue(&hadc1);
+		delay_ms(1);
+		if(AD_RES > 2040){
+			lcd_gotoxy(8, 1);
+			lcd_puts("volt > 2.5");
+		}else {
+			lcd_gotoxy(8, 1);
+			lcd_puts("volt < 2.5");
+		}
 	}
 }
 
-void SYSTEM_TICK_UPDATE(void){
-
-
-}
 
