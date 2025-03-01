@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s 			page 1
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s 			page 1
   28:board/stm32f401rct6/Core/Src/stm32f4xx_it.c **** /* USER CODE BEGIN TD */
   29:board/stm32f401rct6/Core/Src/stm32f4xx_it.c **** 
   30:board/stm32f401rct6/Core/Src/stm32f4xx_it.c **** /* USER CODE END TD */
-ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s 			page 2
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s 			page 2
 
 
   31:board/stm32f401rct6/Core/Src/stm32f4xx_it.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s 			page 1
   77:board/stm32f401rct6/Core/Src/stm32f4xx_it.c ****   }
   37              		.loc 1 77 3 discriminator 1 view .LVU2
   75:board/stm32f401rct6/Core/Src/stm32f4xx_it.c ****   {
-ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s 			page 3
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s 			page 3
 
 
   38              		.loc 1 75 10 discriminator 1 view .LVU3
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s 			page 1
   98:board/stm32f401rct6/Core/Src/stm32f4xx_it.c ****   */
   99:board/stm32f401rct6/Core/Src/stm32f4xx_it.c **** void MemManage_Handler(void)
  100:board/stm32f401rct6/Core/Src/stm32f4xx_it.c **** {
-ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s 			page 4
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s 			page 4
 
 
   75              		.loc 1 100 1 view -0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s 			page 1
  119:board/stm32f401rct6/Core/Src/stm32f4xx_it.c ****   {
  107              		.loc 1 119 9 discriminator 1 view .LVU15
  108 0000 FEE7     		b	.L8
-ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s 			page 5
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s 			page 5
 
 
  109              		.cfi_endproc
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s 			page 1
  144              		.loc 1 145 1 view -0
  145              		.cfi_startproc
  146              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s 			page 6
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s 			page 6
 
 
  147              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s 			page 1
  169:board/stm32f401rct6/Core/Src/stm32f4xx_it.c ****   */
  170:board/stm32f401rct6/Core/Src/stm32f4xx_it.c **** void PendSV_Handler(void)
  171:board/stm32f401rct6/Core/Src/stm32f4xx_it.c **** {
-ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s 			page 7
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s 			page 7
 
 
  182              		.loc 1 171 1 view -0
@@ -395,39 +395,32 @@ ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s 			page 1
  202              		.cfi_startproc
  203              		@ args = 0, pretend = 0, frame = 0
  204              		@ frame_needed = 0, uses_anonymous_args = 0
- 205 0000 08B5     		push	{r3, lr}
- 206              	.LCFI0:
- 207              		.cfi_def_cfa_offset 8
- 208              		.cfi_offset 3, -8
- 209              		.cfi_offset 14, -4
+ 205              		@ link register save eliminated.
  185:board/stm32f401rct6/Core/Src/stm32f4xx_it.c ****   /* USER CODE BEGIN SysTick_IRQn 0 */
  186:board/stm32f401rct6/Core/Src/stm32f4xx_it.c **** 
  187:board/stm32f401rct6/Core/Src/stm32f4xx_it.c ****   /* USER CODE END SysTick_IRQn 0 */
- 188:board/stm32f401rct6/Core/Src/stm32f4xx_it.c ****   HAL_IncTick();
- 210              		.loc 1 188 3 view .LVU27
- 211 0002 FFF7FEFF 		bl	HAL_IncTick
- 212              	.LVL0:
+ 188:board/stm32f401rct6/Core/Src/stm32f4xx_it.c **** //  HAL_IncTick();
  189:board/stm32f401rct6/Core/Src/stm32f4xx_it.c ****   /* USER CODE BEGIN SysTick_IRQn 1 */
  190:board/stm32f401rct6/Core/Src/stm32f4xx_it.c **** 
  191:board/stm32f401rct6/Core/Src/stm32f4xx_it.c ****   /* USER CODE END SysTick_IRQn 1 */
  192:board/stm32f401rct6/Core/Src/stm32f4xx_it.c **** }
- 213              		.loc 1 192 1 is_stmt 0 view .LVU28
- 214 0006 08BD     		pop	{r3, pc}
- 215              		.cfi_endproc
- 216              	.LFE830:
- 218              		.section	.text.DMA2_Stream0_IRQHandler,"ax",%progbits
- 219              		.align	1
- 220              		.global	DMA2_Stream0_IRQHandler
-ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s 			page 8
-
-
- 221              		.syntax unified
- 222              		.thumb
- 223              		.thumb_func
- 225              	DMA2_Stream0_IRQHandler:
- 226              	.LFB831:
+ 206              		.loc 1 192 1 view .LVU27
+ 207 0000 7047     		bx	lr
+ 208              		.cfi_endproc
+ 209              	.LFE830:
+ 211              		.section	.text.DMA2_Stream0_IRQHandler,"ax",%progbits
+ 212              		.align	1
+ 213              		.global	DMA2_Stream0_IRQHandler
+ 214              		.syntax unified
+ 215              		.thumb
+ 216              		.thumb_func
+ 218              	DMA2_Stream0_IRQHandler:
+ 219              	.LFB831:
  193:board/stm32f401rct6/Core/Src/stm32f4xx_it.c **** 
  194:board/stm32f401rct6/Core/Src/stm32f4xx_it.c **** /******************************************************************************/
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s 			page 8
+
+
  195:board/stm32f401rct6/Core/Src/stm32f4xx_it.c **** /* STM32F4xx Peripheral Interrupt Handlers                                    */
  196:board/stm32f401rct6/Core/Src/stm32f4xx_it.c **** /* Add here the Interrupt Handlers for the used peripherals.                  */
  197:board/stm32f401rct6/Core/Src/stm32f4xx_it.c **** /* For the available peripheral interrupt handler names,                      */
@@ -439,76 +432,71 @@ ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s 			page 1
  203:board/stm32f401rct6/Core/Src/stm32f4xx_it.c ****   */
  204:board/stm32f401rct6/Core/Src/stm32f4xx_it.c **** void DMA2_Stream0_IRQHandler(void)
  205:board/stm32f401rct6/Core/Src/stm32f4xx_it.c **** {
- 227              		.loc 1 205 1 is_stmt 1 view -0
- 228              		.cfi_startproc
- 229              		@ args = 0, pretend = 0, frame = 0
- 230              		@ frame_needed = 0, uses_anonymous_args = 0
- 231 0000 08B5     		push	{r3, lr}
- 232              	.LCFI1:
- 233              		.cfi_def_cfa_offset 8
- 234              		.cfi_offset 3, -8
- 235              		.cfi_offset 14, -4
+ 220              		.loc 1 205 1 view -0
+ 221              		.cfi_startproc
+ 222              		@ args = 0, pretend = 0, frame = 0
+ 223              		@ frame_needed = 0, uses_anonymous_args = 0
+ 224 0000 08B5     		push	{r3, lr}
+ 225              	.LCFI0:
+ 226              		.cfi_def_cfa_offset 8
+ 227              		.cfi_offset 3, -8
+ 228              		.cfi_offset 14, -4
  206:board/stm32f401rct6/Core/Src/stm32f4xx_it.c ****   /* USER CODE BEGIN DMA2_Stream0_IRQn 0 */
  207:board/stm32f401rct6/Core/Src/stm32f4xx_it.c **** 
  208:board/stm32f401rct6/Core/Src/stm32f4xx_it.c ****   /* USER CODE END DMA2_Stream0_IRQn 0 */
  209:board/stm32f401rct6/Core/Src/stm32f4xx_it.c ****   HAL_DMA_IRQHandler(&hdma_adc1);
- 236              		.loc 1 209 3 view .LVU30
- 237 0002 0248     		ldr	r0, .L18
- 238 0004 FFF7FEFF 		bl	HAL_DMA_IRQHandler
- 239              	.LVL1:
+ 229              		.loc 1 209 3 view .LVU29
+ 230 0002 0248     		ldr	r0, .L17
+ 231 0004 FFF7FEFF 		bl	HAL_DMA_IRQHandler
+ 232              	.LVL0:
  210:board/stm32f401rct6/Core/Src/stm32f4xx_it.c ****   /* USER CODE BEGIN DMA2_Stream0_IRQn 1 */
  211:board/stm32f401rct6/Core/Src/stm32f4xx_it.c **** 
  212:board/stm32f401rct6/Core/Src/stm32f4xx_it.c ****   /* USER CODE END DMA2_Stream0_IRQn 1 */
  213:board/stm32f401rct6/Core/Src/stm32f4xx_it.c **** }
- 240              		.loc 1 213 1 is_stmt 0 view .LVU31
- 241 0008 08BD     		pop	{r3, pc}
- 242              	.L19:
- 243 000a 00BF     		.align	2
- 244              	.L18:
- 245 000c 00000000 		.word	hdma_adc1
- 246              		.cfi_endproc
- 247              	.LFE831:
- 249              		.text
- 250              	.Letext0:
- 251              		.file 2 "c:\\st\\stm32cubeide_1.12.1\\stm32cubeide\\plugins\\com.st.stm32cube.ide.mcu.externaltool
- 252              		.file 3 "c:\\st\\stm32cubeide_1.12.1\\stm32cubeide\\plugins\\com.st.stm32cube.ide.mcu.externaltool
- 253              		.file 4 "board/stm32f401rct6/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xc.h"
- 254              		.file 5 "board/stm32f401rct6/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
- 255              		.file 6 "board/stm32f401rct6/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
- 256              		.file 7 "board/stm32f401rct6/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_tim.h"
- 257              		.file 8 "board/stm32f401rct6/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h"
- 258              		.file 9 "board/stm32f401rct6/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
-ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s 			page 9
-
-
-ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s 			page 10
+ 233              		.loc 1 213 1 is_stmt 0 view .LVU30
+ 234 0008 08BD     		pop	{r3, pc}
+ 235              	.L18:
+ 236 000a 00BF     		.align	2
+ 237              	.L17:
+ 238 000c 00000000 		.word	hdma_adc1
+ 239              		.cfi_endproc
+ 240              	.LFE831:
+ 242              		.text
+ 243              	.Letext0:
+ 244              		.file 2 "c:\\st\\stm32cubeide_1.12.1\\stm32cubeide\\plugins\\com.st.stm32cube.ide.mcu.externaltool
+ 245              		.file 3 "c:\\st\\stm32cubeide_1.12.1\\stm32cubeide\\plugins\\com.st.stm32cube.ide.mcu.externaltool
+ 246              		.file 4 "board/stm32f401rct6/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xc.h"
+ 247              		.file 5 "board/stm32f401rct6/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 248              		.file 6 "board/stm32f401rct6/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 249              		.file 7 "board/stm32f401rct6/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_tim.h"
+ 250              		.file 8 "board/stm32f401rct6/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h"
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f4xx_it.c
-C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s:20     .text.NMI_Handler:0000000000000000 $t
-C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s:26     .text.NMI_Handler:0000000000000000 NMI_Handler
-C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s:44     .text.HardFault_Handler:0000000000000000 $t
-C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s:50     .text.HardFault_Handler:0000000000000000 HardFault_Handler
-C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s:67     .text.MemManage_Handler:0000000000000000 $t
-C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s:73     .text.MemManage_Handler:0000000000000000 MemManage_Handler
-C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s:90     .text.BusFault_Handler:0000000000000000 $t
-C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s:96     .text.BusFault_Handler:0000000000000000 BusFault_Handler
-C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s:113    .text.UsageFault_Handler:0000000000000000 $t
-C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s:119    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
-C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s:136    .text.SVC_Handler:0000000000000000 $t
-C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s:142    .text.SVC_Handler:0000000000000000 SVC_Handler
-C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s:155    .text.DebugMon_Handler:0000000000000000 $t
-C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s:161    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
-C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s:174    .text.PendSV_Handler:0000000000000000 $t
-C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s:180    .text.PendSV_Handler:0000000000000000 PendSV_Handler
-C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s:193    .text.SysTick_Handler:0000000000000000 $t
-C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s:199    .text.SysTick_Handler:0000000000000000 SysTick_Handler
-C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s:219    .text.DMA2_Stream0_IRQHandler:0000000000000000 $t
-C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s:225    .text.DMA2_Stream0_IRQHandler:0000000000000000 DMA2_Stream0_IRQHandler
-C:\Users\Admin\AppData\Local\Temp\ccsF2yXe.s:245    .text.DMA2_Stream0_IRQHandler:000000000000000c $d
+C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s:20     .text.NMI_Handler:0000000000000000 $t
+C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s:26     .text.NMI_Handler:0000000000000000 NMI_Handler
+C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s:44     .text.HardFault_Handler:0000000000000000 $t
+C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s:50     .text.HardFault_Handler:0000000000000000 HardFault_Handler
+C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s:67     .text.MemManage_Handler:0000000000000000 $t
+C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s:73     .text.MemManage_Handler:0000000000000000 MemManage_Handler
+C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s:90     .text.BusFault_Handler:0000000000000000 $t
+C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s:96     .text.BusFault_Handler:0000000000000000 BusFault_Handler
+C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s:113    .text.UsageFault_Handler:0000000000000000 $t
+C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s:119    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
+C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s:136    .text.SVC_Handler:0000000000000000 $t
+C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s:142    .text.SVC_Handler:0000000000000000 SVC_Handler
+C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s:155    .text.DebugMon_Handler:0000000000000000 $t
+C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s:161    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
+C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s:174    .text.PendSV_Handler:0000000000000000 $t
+C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s:180    .text.PendSV_Handler:0000000000000000 PendSV_Handler
+C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s:193    .text.SysTick_Handler:0000000000000000 $t
+C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s:199    .text.SysTick_Handler:0000000000000000 SysTick_Handler
+C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s:212    .text.DMA2_Stream0_IRQHandler:0000000000000000 $t
+C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s:218    .text.DMA2_Stream0_IRQHandler:0000000000000000 DMA2_Stream0_IRQHandler
+C:\Users\Admin\AppData\Local\Temp\ccdn4Q3K.s:238    .text.DMA2_Stream0_IRQHandler:000000000000000c $d
 
 UNDEFINED SYMBOLS
-HAL_IncTick
 HAL_DMA_IRQHandler
 hdma_adc1
