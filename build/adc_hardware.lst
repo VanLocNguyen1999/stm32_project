@@ -1,0 +1,44 @@
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccnpcoUh.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"adc_hardware.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	adc1_buffer
+  20              		.section	.bss.adc1_buffer,"aw",%nobits
+  21              		.align	2
+  24              	adc1_buffer:
+  25 0000 00000000 		.space	8
+  25      00000000 
+  26              		.text
+  27              	.Letext0:
+  28              		.file 1 "c:\\st\\stm32cubeide_1.12.1\\stm32cubeide\\plugins\\com.st.stm32cube.ide.mcu.externaltool
+  29              		.file 2 "c:\\st\\stm32cubeide_1.12.1\\stm32cubeide\\plugins\\com.st.stm32cube.ide.mcu.externaltool
+  30              		.file 3 "board/stm32f401rct6/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_tim.h"
+  31              		.file 4 "board/stm32f401rct6/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h"
+  32              		.file 5 "board/stm32f401rct6/Core/Extension/adc_hardware.h"
+  33              		.file 6 "board/stm32f401rct6/Core/Extension/adc_hardware.c"
+ARM GAS  C:\Users\Admin\AppData\Local\Temp\ccnpcoUh.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 adc_hardware.c
+C:\Users\Admin\AppData\Local\Temp\ccnpcoUh.s:24     .bss.adc1_buffer:0000000000000000 adc1_buffer
+C:\Users\Admin\AppData\Local\Temp\ccnpcoUh.s:21     .bss.adc1_buffer:0000000000000000 $d
+
+NO UNDEFINED SYMBOLS
