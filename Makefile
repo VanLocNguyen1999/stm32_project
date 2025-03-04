@@ -74,6 +74,7 @@ C_SOURCES +=  \
 board/stm32f401rct6/Core/Extension/lcd.c \
 board/stm32f401rct6/Core/Extension/pwm.c \
 board/stm32f401rct6/Core/Extension/adc_hardware.c \
+board/stm32f401rct6/Core/Extension/dht11.c \
 board/stm32f401rct6/Core/Extension/board.c 
 C_SOURCES +=  \
 app/main.c 

@@ -6,23 +6,27 @@
  */
 
 #include "board.h"
+#include "dht11.h"
 
-uint16_t AD_RES = 0;
+Dht11 dht11;
+
+uint16_t counter = 0;
+
+
 
 int main(void) {
 
 	board_hardware_init_ex();
-
+	dht11_init_ex(&dht11);
 	while (1) {
 
-		delay_ms(1);
-		if (AD_RES > 2040) {
-			lcd_gotoxy(8, 1);
-			lcd_puts("volt > 2.5");
-		} else {
-			lcd_gotoxy(8, 1);
-			lcd_puts("volt < 2.5");
+		counter ++;
+		if(counter > 500){
+
+			counter = 0;
+			dht11_read_data(&dht11);
 		}
+
 	}
 }
 

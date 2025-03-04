@@ -15,6 +15,7 @@
 // SysTick_Handler function will be called every 1 us
 static inline void delay_hardware_init_ex(){
 
+	DELAY_TIMER->PSC = SYS_CLOCK/1000000 - 1;
 	LL_TIM_EnableCounter(DELAY_TIMER);
 }
 
